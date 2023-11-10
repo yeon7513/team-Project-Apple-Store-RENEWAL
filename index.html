@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Store 온라인</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/chaerin.css" />
+  <link rel="stylesheet" href="./css/seolhwa.css">
+  <link rel="stylesheet" href="./css/huiyeon.css">
+  <link rel="stylesheet" href="./css/naeun.css" />
+  <link rel="stylesheet" href="./css/footer.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  <script defer src="./js/chaerin.js"></script>
+  <script defer src="./js/seolhwa.js"></script>
+  <script defer src="./js/huiyeon.js"></script>
+  <script defer src="./js/naeun.js"></script>
+  <script defer src="./js/footer.js"></script>
+  <script defer src="./js/common.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      handleResize();
+    });
+  </script>
+</head>
+<body>
+  <!-- Chaerin -->
+  <header>
+    <div id="hd_wrap">
+      <div class="hd_inner">
+        <div class="logo">
+          <a href="#"><img src="./images/hd_logo.png" alt="logo_image">
+            <h2>Store</h2>
+          </a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li class="store"><a href="#">스토어</a></li>
+            <li class="product"><a href="#">제품</a></li>
+            <li class="accessory"><a href="#">악세서리 </a></li>
+            <li class="subscribe"><a href="#">구독</a></li>
+            <li class="support"><a href="#">고객지원</a></li>
+          </ul>
+        </div>
+        <!-- 메뉴에 쓰이는 아이콘들  -->
+        <div class="icons">
+          <!-- 검색 -->
+          <a href="#" class="search"><span class="material-symbols-outlined">search</span></a>
+          <!-- 장바구니 -->
+          <a href="#" class="shoppingbag"><span class="material-symbols-outlined">shopping_bag</span></a>
+          <!-- 반응형 햄버거메뉴 아이콘 (tab & mobile) -->
+          <div class="hammenu">
+            <a href="#"><span class="material-symbols-outlined" class="hammenu">menu</span></a>
+          </div>
+          <!-- 반응형 햄버거메뉴,검색,장바구니 닫는 클로즈 아이콘 (tab & mobile) -->
+          <div class="close_menu">
+            <a href="#"><span class="material-symbols-outlined" class="close_menu">close</span></a>
+          </div>
+          <!-- 반응형 뒤로가기 아이콘과 텍스트 (tab & mobile) -->
+          <div class="back_menu">
+            <a href="#"><span class="material-symbols-outlined">undo</span>뒤로가기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- 헤더 아래 메뉴들  -->
+  <div id="header_inner">
+    <!-- .search 내부 검색하는 곳 -->
+    <div class="menu__search">
+      <div class="search-content">
+        <div class="search-content__inner">
+          <a href="#"><span class="material-symbols-outlined inner_serch_icon">search</span></a>
+          <input class="searchfield" placeholder="apple.com 검색하기">
+        </div>
+        <div class="quick__link">
+          <ul>
+            <p>빠른 링크</p>
+            <li><a href="#"><span class="material-symbols-outlined arrow">arrow_forward</span>Apple Store Online에서
+                쇼핑하기</a></li>
+            <li><a href="#"><span class="material-symbols-outlined arrow">arrow_forward</span>액세서리</a></li>
+            <li><a href="#"><span class="material-symbols-outlined arrow">arrow_forward</span>AirPods</a></li>
+            <li><a href="#"><span class="material-symbols-outlined arrow">arrow_forward</span>AirTag</a></li>
+            <li><a href="#"><span class="material-symbols-outlined arrow">arrow_forward</span>Apple Trade In</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- .shoppingbag 내부 장바구니 -->
+    <div class="menu__cart">
+      <div class="cart-content">
+        <div class="cart-content__inner">
+          <p>장바구니가 비어 있습니다.</p>
+          <p>저장해둔 항목이 있는지 확인하려면 <a href="#">로그인</a>하세요</p>
+        </div>
+        <div class="my_cart">
+          <ul>
+            <p>내 프로필</p>
+            <li><a href="#"><span class="material-symbols-outlined">orders</span>주문</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">favorite</span>관심 목록</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">account_circle</span>계정</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">login</span>로그인</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- .menu 안쪽 메뉴들 -->
+    <div class="menu_inner">
+      <!-- 스토어부분 피씨, 탭, 모바일 공통 -->
+      <div class="menu__store">
+        <div class="store-content">
+          <!-- .store__inner__menu는 pc에서만 보이게! 탭,모바일에서는 .hidden__small클래스로 안보이게 -->
+          <!-- 각각 스타일 줄 필요 없어서 악세사리,구독,고객지원 부분도 .store__inner__menu로 통일 -->
+          <div class="store__inner__menu hidden__small">
+            <p>쇼핑하기 ></p>
+            <p>빠른 링크 ></p>
+            <p>특별 할인 쇼핑하기 ></p>
+          </div>
+          <div class="categories">
+            <ul class="store-category1">
+              <!-- .full__hidden은 탭,모바일에서만 보이게! pc에서는 안보이게 처리 -->
+              <li class="full__hidden">
+                <p>쇼핑하기 ></p>
+              </li>
+              <li><a href="#">최신 제품 쇼핑하기</a></li>
+              <li><a href="#">Mac</a></li>
+              <li><a href="#">iPad</a></li>
+              <li><a href="#">iPhone</a></li>
+              <li><a href="#">Apple Watch</a></li>
+              <li><a href="#">액세서리</a></li>
+            </ul>
+            <ul class="store-category2">
+              <li class="full__hidden">
+                <p>빠른 링크 ></p>
+              </li>
+              <li><a href="#">매장 찾기</a></li>
+              <li><a href="#">주문 상태</a></li>
+              <li><a href="#">Apple Trade In</a></li>
+              <li><a href="#">할부 방식</a></li>
+            </ul>
+            <ul class="store-category3">
+              <li class="full__hidden">
+                <p>특별 할인 쇼핑하기 ></p>
+              </li>
+              <li><a href="#">인증 리퍼비쉬 제품</a></li>
+              <li><a href="#">교육</a></li>
+              <li><a href="#">비즈니스</a></li>
+            </ul>
+          </div>
+          <img src="./images/menu_store.png" alt="이미지_설명" class="store-image hidden_media">
+        </div>
+      </div>
+      <!-- 제품 부분 (only pc) -->
+      <!-- 제품부분은 수정할 게 많아서 따로 작업 -->
+      <!-- pc에서 보이는 제품 내부임 .mo__pad__hidden 클래스 추가하여 패드,모바일에서는 안보이게 처리 -->
+      <!-- 이미지는 pc에서만 보임 . hidden_media 클래스 추가하여 패드,모바일에서는 안보이게 처리 -->
+      <div class="menu__product mo__pad__hidden">
+        <div class="product-content">
+          <!-- .product 내부 6가지 제품 (only pc) -->
+          <!-- 각 제품에 마우스를 대면 제품 내부 카테고리들이 각 제품에 맞게 변경-->
+          <div class="super-category">
+            <div class="mac"><a href="#"><span>Mac</span></a></div>
+            <div class="ipad"><a href="#"><span>iPad</span></a></div>
+            <div class="iphone"><a href="#"><span>iPhone</span></a></div>
+            <div class="watch"><a href="#"><span>Watch</span></a></div>
+            <div class="airpods"><a href="#"><span>AirPods</span></a></div>
+            <div class="tv"><a href="#"><span>TV 및 홈</span></a></div>
+          </div>
+          <!-- 제품중 맥 부분 (pc ver.)-->
+          <div class="product_inner_mac">
+            <div class="product__inner__menu hidden__small">
+              <p>Mac 살펴보기 ></p>
+              <p>Mac 쇼핑하기 ></p>
+              <p>그 외 Mac 관련 항목 ></p>
+            </div>
+            <div class="mac_categories">
+              <ul class="product-mac-category1">
+                <li><a href="#">Mac 모두 살펴보기</a></li>
+                <li><a href="#">MacBook Air</a></li>
+                <li><a href="#">MacBook Pro</a></li>
+                <li><a href="#">iMac</a></li>
+                <li><a href="#">Mac mini</a></li>
+                <li><a href="#">Mac Studio</a></li>
+                <li><a href="#">Mac Pro</a></li>
+                <li><a href="#">디스플레이</a></li>
+                <li><a href="#">Mac 비교하기</a></li>
+                <li><a href="#">Mac은 뭐든 척척</a></li>
+              </ul>
+              <ul class="product-mac-category2">
+                <li><a href="#">Mac 쇼핑하기</a></li>
+                <li><a href="#">Mac 액세서리</a></li>
+                <li><a href="#">Apple Trade In</a></li>
+                <li><a href="#">할부 방식</a></li>
+              </ul>
+              <ul class="product-mac-category3">
+                <li><a href="#">Mac 지원</a></li>
+                <li><a href="#">Mac을 위한 AppleCare+</a></li>
+                <li><a href="#">MacOS Sonoma</a></li>
+                <li><a href="#">Final Cut Pro</a></li>
+                <li><a href="#">Logic Pro</a></li>
+                <li><a href="#">연속성</a></li>
+                <li><a href="#">iCloud+</a></li>
+                <li><a href="#">Mac과 비즈니스</a></li>
+                <li><a href="#">교육</a></li>
+              </ul>
+            </div>
+            <!-- 제품 이미지 위에 링크 넣으려 했던것 추후 상의 후 결정 -->
+            <!-- <p><a href="#">아래 제품 살펴보기</a></p> -->
+            <!-- 빈공간 지정이 되지 않아 마우스 올리면 메뉴가 도망가서 채우려고 넣어둔것 -->
+            <div class="empty-space-left"></div>
+            <div class="empty-space-right"></div>
+            <img src="./images/pd_mac.png" alt="이미지_설명" class="pd_mac hidden_media">
+          </div>
+          <!-- 제품중 아이패드 부분 (pc ver.) -->
+          <div class="product_inner_ipad">
+            <div class="product__inner__menu">
+              <p>iPad 살펴보기 ></p>
+              <p>iPad 쇼핑하기 ></p>
+              <p>그 외 iPad 관련 항목 ></p>
+            </div>
+            <div class="ipad_categories">
+              <ul class="product-ipad-category1">
+                <li><a href="#">iPad 모두 살펴보기</a></li>
+                <li><a href="#">iPad Pro</a></li>
+                <li><a href="#">iPad Air</a></li>
+                <li><a href="#">iPad</a></li>
+                <li><a href="#">iPad mini</a></li>
+                <li><a href="#">Apple Pencil</a></li>
+                <li><a href="#">키보드</a></li>
+                <li><a href="#">iPad 비교하기</a></li>
+                <li><a href="#">iPad를 선택하는 이유</a></li>
+              </ul>
+              <ul class="product-ipad-category2">
+                <li><a href="#">iPad 쇼핑하기</a></li>
+                <li><a href="#">iPad 액세서리</a></li>
+                <li><a href="#">Apple Trade In</a></li>
+                <li><a href="#">할부 방식</a></li>
+              </ul>
+              <ul class="product-ipad-category3">
+                <li><a href="#">iPad 지원</a></li>
+                <li><a href="#">iPad를 위한 AppleCare+</a></li>
+                <li><a href="#">iPadOS 17</a></li>
+                <li><a href="#">iPad용 Final Cut Pro</a></li>
+                <li><a href="#">iPad용 Logic Pro</a></li>
+                <li><a href="#">iCloud+</a></li>
+                <li><a href="#">교육</a></li>
+              </ul>
+            </div>
+            <!-- <p><a href="#">아래 제품 살펴보기</a></p> -->
+            <div class="empty-space-left"></div>
+            <div class="empty-space-right"></div>
+            <img src="./images/pd_ipad.png" alt="이미지_설명" class="pd_ipad  hidden_media">
+          </div>
+          <!-- 제품중 아이폰 부분 (pc ver.) -->
+          <div class="product_inner_iphone">
+            <div class="product__inner__menu">
+              <p>iPhone 살펴보기 ></p>
+              <p>iPhone 쇼핑하기 ></p>
+              <p>그 외 iPhone 관련 항목 ></p>
+            </div>
+            <div class="iphone_categories">
+              <ul class="product-iphone-category1">
+                <li><a href="#">iPhone 모두 살펴보기</a></li>
+                <li><a href="#">iPhone 15 Pro</a></li>
+                <li><a href="#">iPhone 15</a></li>
+                <li><a href="#">iPhone 14</a></li>
+                <li><a href="#">iPhone 13</a></li>
+                <li><a href="#">iPhone SE</a></li>
+                <li><a href="#">iPhone 비교하기</a></li>
+                <li><a href="#">안드로이드에서 갈아타기</a></li>
+              </ul>
+              <ul class="product-iphone-category2">
+                <li><a href="#">iPhone 쇼핑하기</a></li>
+                <li><a href="#">iPhone 액세서리</a></li>
+                <li><a href="#">Apple Trade In</a></li>
+                <li><a href="#">할부 방식</a></li>
+              </ul>
+              <ul class="product-iphone-category3">
+                <li><a href="#">iPhone 지원</a></li>
+                <li><a href="#">iPhone을 위한 AppleCare+</a></li>
+                <li><a href="#">iOS 17</a></li>
+                <li><a href="#">iPhone의 개인 정보 보호</a></li>
+                <li><a href="#">iCloud+</a></li>
+                <li><a href="#">Apple 지갑, Apple Pay</a></li>
+                <li><a href="#">Siri</a></li>
+              </ul>
+            </div>
+            <!-- <p><a href="#">아래 제품 살펴보기</a></p> -->
+            <div class="empty-space-left"></div>
+            <div class="empty-space-right"></div>
+            <img src="./images/pd_iphone.png" alt="이미지_설명" class="pd_iphone hidden_media">
+          </div>
+          <!-- 제품중 왓치 부분 (pc ver.) -->
+          <div class="product_inner_watch">
+            <div class="product__inner__menu">
+              <p>Watch 살펴보기 ></p>
+              <p>Watch 쇼핑하기 ></p>
+              <p>그 외 Watch 관련 항목 ></p>
+            </div>
+            <div class="watch_categories">
+              <ul class="product-watch-category1">
+                <li><a href="#">Apple Watch 모두 살펴보기</a></li>
+                <li><a href="#">Apple Watch Series9</a></li>
+                <li><a href="#">Apple Watch Ultra 2</a></li>
+                <li><a href="#">Apple Watch SE</a></li>
+                <li><a href="#">Apple Watch Nike</a></li>
+                <li><a href="#">Apple Watch Hermès</a></li>
+                <li><a href="#">Watch 비교하기</a></li>
+                <li><a href="#">Apple Watch를 선택하는 이유</a></li>
+              </ul>
+              <ul class="product-watch-category2">
+                <li><a href="#">Apple Watch 쇼핑하기</a></li>
+                <li><a href="#">Apple Watch Studio</a></li>
+                <li><a href="#">Apple Watch 밴드</a></li>
+                <li><a href="#">Apple Watch 액세버리</a></li>
+                <li><a href="#">Apple Trade In</a></li>
+                <li><a href="#">할부 방식</a></li>
+              </ul>
+              <ul class="product-watch-category3">
+                <li><a href="#">Apple Watch 지원</a></li>
+                <li><a href="#">AppleCare+</a></li>
+                <li><a href="#">WatchOS 10</a></li>
+              </ul>
+            </div>
+            <!-- <p><a href="#">아래 제품 살펴보기</a></p> -->
+            <div class="empty-space-left"></div>
+            <div class="empty-space-right"></div>
+            <img src="./images/pd_watch.png" alt="이미지_설명" class="pd_watch hidden_media">
+          </div>
+          <!-- 제품중 에어팟 부분 (pc ver.) -->
+          <div class="product_inner_airpods">
+            <div class="product__inner__menu">
+              <p>Airpods 살펴보기 ></p>
+              <p>Airpods 쇼핑하기 ></p>
+              <p>그 외 Airpods 관련 항목 ></p>
+            </div>
+            <div class="airpods_categories">
+              <ul class="product-airpods-category1">
+                <li><a href="#">Airpods 모두 살펴보기</a></li>
+                <li><a href="#">Airpods Pro 2세대</a></li>
+                <li><a href="#">Airpods 2세대</a></li>
+                <li><a href="#">Airpods 3세대</a></li>
+                <li><a href="#">Airpods Max</a></li>
+                <li><a href="#">Airpods 비교하기</a></li>
+              </ul>
+              <ul class="product-airpods-category2">
+                <li><a href="#">Airpods 쇼핑하기</a></li>
+                <li><a href="#">Airpods 액세서리</a></li>
+              </ul>
+              <ul class="product-airpods-category3">
+                <li><a href="#">Airpods 지원</a></li>
+                <li><a href="#">헤드폰을 위한 AppleCare+</a></li>
+                <li><a href="#">Apple Music</a></li>
+              </ul>
+            </div>
+            <!-- <p><a href="#">아래 제품 살펴보기</a></p> -->
+            <div class="empty-space-left"></div>
+            <div class="empty-space-right"></div>
+            <img src="./images/pd_airpods.png" alt="이미지_설명" class="pd_airpods hidden_media">
+          </div>
+          <!-- 제품중 티비 부분 (pc ver.) -->
+          <div class="product_inner_tv">
+            <div class="product__inner__menu">
+              <p>TV 및 홈 살펴보기 ></p>
+              <p>TV 및 홈 쇼핑하기 ></p>
+              <p>그 외 TV 및 홈 관련 항목 ></p>
+            </div>
+            <div class="tv_categories">
+              <ul class="product-tv-category1">
+                <li><a href="#">TV 및 홈 살펴보기</a></li>
+                <li><a href="#">Apple TV 4K</a></li>
+              </ul>
+              <ul class="product-tv-category2">
+                <li><a href="#">Apple TV 4K 쇼핑하기</a></li>
+                <li><a href="#">Siri Remote 쇼핑하기</a></li>
+                <li><a href="#">TV 및 홈 액세서리</a></li>
+              </ul>
+              <ul class="product-tv-category3">
+                <li><a href="#">Apple TV 지원</a></li>
+                <li><a href="#">AppleCare+</a></li>
+                <li><a href="#">Apple TV 앱</a></li>
+                <li><a href="#">Apple TV+</a></li>
+                <li><a href="#">홈 앱</a></li>
+                <li><a href="#">Apple Music</a></li>
+                <li><a href="#">Siri</a></li>
+                <li><a href="#">AirPlay</a></li>
+              </ul>
+            </div>
+            <!-- <p><a href="#">아래 제품 살펴보기</a></p> -->
+            <div class="empty-space-left"></div>
+            <div class="empty-space-right"></div>
+            <img src="./images/pd_tv.png" alt="이미지_설명" class="pd_tv hidden_media">
+          </div>
+        </div>
+      </div>
+      <!-- 제품 부분 (tab & mobile) -->
+      <!-- 제품부분은 수정할 게 많아서 따로 작업 -->
+      <!-- 탭, 모바일에서 보이는 제품 내부임 .pc__hidden 클래스 추가하여 pc에서는 안보이게 처리 -->
+      <div class="pc__hidden">
+        <div class="menu__product2">
+          <div class="product-content2">
+            <!-- 제품중 맥 부분 (tab & mobile) -->
+            <div class="product_inner_mac hidden_click_mac">
+              <div class="mac"><a href="#" class="macClick"><span>Mac</span><span
+                    class="material-symbols-outlined pc__hidden">arrow_drop_down</span></a></div>
+              <div class="mac_categories on_category_mac">
+                <ul class="product-mac-category1">
+                  <li>
+                    <p>Mac 살펴보기 ></p>
+                  </li>
+                  <li><a href="#">Mac 모두 살펴보기</a></li>
+                  <li><a href="#">MacBook Air</a></li>
+                  <li><a href="#">MacBook Pro</a></li>
+                  <li><a href="#">iMac</a></li>
+                  <li><a href="#">Mac mini</a></li>
+                  <li><a href="#">Mac Studio</a></li>
+                  <li><a href="#">Mac Pro</a></li>
+                  <li><a href="#">디스플레이</a></li>
+                  <li><a href="#">Mac 비교하기</a></li>
+                  <li><a href="#">Mac은 뭐든 척척</a></li>
+                </ul>
+                <ul class="product-mac-category2">
+                  <li>
+                    <p>Mac 쇼핑하기 ></p>
+                  </li>
+                  <li><a href="#">Mac 쇼핑하기</a></li>
+                  <li><a href="#">Mac 액세서리</a></li>
+                  <li><a href="#">Apple Trade In</a></li>
+                  <li><a href="#">할부 방식</a></li>
+                </ul>
+                <ul class="product-mac-category3">
+                  <li>
+                    <p>그 외 Mac 관련 항목 ></p>
+                  </li>
+                  <li><a href="#">Mac 지원</a></li>
+                  <li><a href="#">Mac을 위한 AppleCare+</a></li>
+                  <li><a href="#">MacOS Sonoma</a></li>
+                  <li><a href="#">Final Cut Pro</a></li>
+                  <li><a href="#">Logic Pro</a></li>
+                  <li><a href="#">연속성</a></li>
+                  <li><a href="#">iCloud+</a></li>
+                  <li><a href="#">Mac과 비즈니스</a></li>
+                  <li><a href="#">교육</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- 제품중 아이패드 부분 (tab & mobile) -->
+            <div class="product_inner_ipad hidden_click_ipad">
+              <div class="ipad"><a href="#" class="ipadClick"><span>iPad</span><span
+                    class="material-symbols-outlined pc__hidden">arrow_drop_down</span></a></div>
+              <div class="ipad_categories on_category_ipad">
+                <ul class="product-ipad-category1">
+                  <li>
+                    <p>iPad 살펴보기 ></p>
+                  </li>
+                  <li><a href="#">iPad 모두 살펴보기</a></li>
+                  <li><a href="#">iPad Pro</a></li>
+                  <li><a href="#">iPad Air</a></li>
+                  <li><a href="#">iPad</a></li>
+                  <li><a href="#">iPad mini</a></li>
+                  <li><a href="#">Apple Pencil</a></li>
+                  <li><a href="#">키보드</a></li>
+                  <li><a href="#">iPad 비교하기</a></li>
+                  <li><a href="#">iPad를 선택하는 이유</a></li>
+                </ul>
+                <ul class="product-ipad-category2">
+                  <li>
+                    <p>iPad 쇼핑하기 ></p>
+                  </li>
+                  <li><a h ref="#">iPad 쇼핑하기</a></li>
+                  <li><a href="#">iPad 액세서리</a></li>
+                  <li><a href="#">Apple Trade In</a></li>
+                  <li><a href="#">할부 방식</a></li>
+                </ul>
+                <ul class="product-ipad-category3">
+                  <li>
+                    <p>그 외 iPad 관련 항목 ></p>
+                  </li>
+                  <li><a href="#">iPad 지원</a></li>
+                  <li><a href="#">iPad를 위한 AppleCare+</a></li>
+                  <li><a href="#">iPadOS 17</a></li>
+                  <li><a href="#">iPad용 Final Cut Pro</a></li>
+                  <li><a href="#">iPad용 Logic Pro</a></li>
+                  <li><a href="#">iCloud+</a></li>
+                  <li><a href="#">교육</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- 제품중 아이폰 부분 (tab & mobile) -->
+            <div class="product_inner_iphone hidden_click_iphone">
+              <div class="iphone"><a href="#" class="iphoneClick"><span>iPhone</span><span
+                    class="material-symbols-outlined pc__hidden">arrow_drop_down</span></a></div>
+              <div class="iphone_categories on_category_iphone">
+                <ul class="product-iphone-category1">
+                  <li>
+                    <p>iPhone 살펴보기 ></p>
+                  </li>
+                  <li><a href="#">iPhone 모두 살펴보기</a></li>
+                  <li><a href="#">iPhone 15 Pro</a></li>
+                  <li><a href="#">iPhone 15</a></li>
+                  <li><a href="#">iPhone 14</a></li>
+                  <li><a href="#">iPhone 13</a></li>
+                  <li><a href="#">iPhone SE</a></li>
+                  <li><a href="#">iPhone 비교하기</a></li>
+                  <li><a href="#">안드로이드에서 갈아타기</a></li>
+                </ul>
+                <ul class="product-iphone-category2">
+                  <li>
+                    <p>iPhone 쇼핑하기 ></p>
+                  </li>
+                  <li><a href="#">iPhone 쇼핑하기</a></li>
+                  <li><a href="#">iPhone 액세서리</a></li>
+                  <li><a href="#">Apple Trade In</a></li>
+                  <li><a href="#">할부 방식</a></li>
+                </ul>
+                <ul class="product-iphone-category3">
+                  <li>
+                    <p>그 외 iPhone 관련 항목 ></p>
+                  </li>
+                  <li><a href="#">iPhone 지원</a></li>
+                  <li><a href="#">iPhone을 위한 AppleCare+</a></li>
+                  <li><a href="#">iOS 17</a></li>
+                  <li><a href="#">iPhone의 개인 정보 보호</a></li>
+                  <li><a href="#">iCloud+</a></li>
+                  <li><a href="#">Apple 지갑, Apple Pay</a></li>
+                  <li><a href="#">Siri</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- 제품중 왓치 부분 (tab & mobile) -->
+            <div class="product_inner_watch hidden_click_watch">
+              <div class="watch"><a href="#" class="watchClick"><span>Watch</span><span
+                    class="material-symbols-outlined pc__hidden">arrow_drop_down</span></a></div>
+              <div class="watch_categories on_category_watch">
+                <ul class="product-watch-category1">
+                  <li>
+                    <p>Watch 살펴보기 ></p>
+                  </li>
+                  <li><a href="#">Apple Watch 모두 살펴보기</a></li>
+                  <li><a href="#">Apple Watch Series9</a></li>
+                  <li><a href="#">Apple Watch Ultra 2</a></li>
+                  <li><a href="#">Apple Watch SE</a></li>
+                  <li><a href="#">Apple Watch Nike</a></li>
+                  <li><a href="#">Apple Watch Hermès</a></li>
+                  <li><a href="#">Watch 비교하기</a></li>
+                  <li><a href="#">Apple Watch를 선택하는 이유</a></li>
+                </ul>
+                <ul class="product-watch-category2">
+                  <li>
+                    <p>Watch 쇼핑하기 ></p>
+                  </li>
+                  <li><a href="#">Apple Watch 쇼핑하기</a></li>
+                  <li><a href="#">Apple Watch Studio</a></li>
+                  <li><a href="#">Apple Watch 밴드</a></li>
+                  <li><a href="#">Apple Watch 액세버리</a></li>
+                  <li><a href="#">Apple Trade In</a></li>
+                  <li><a href="#">할부 방식</a></li>
+                </ul>
+                <ul class="product-watch-category3">
+                  <li>
+                    <p>그 외 Watch 관련 항목 ></p>
+                  </li>
+                  <li><a href="#">Apple Watch 지원</a></li>
+                  <li><a href="#">AppleCare+</a></li>
+                  <li><a href="#">WatchOS 10</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- 제품중 에어팟 부분 (tab & mobile) -->
+            <div class="product_inner_airpods hidden_click_airpods">
+              <div class="airpods"><a href="#" class="airpodsClick"><span>AirPods</span><span
+                    class="material-symbols-outlined pc__hidden">arrow_drop_down</span></a></div>
+              <div class="airpods_categories on_category_airpods">
+                <ul class="product-airpods-category1">
+                  <li>
+                    <p>Airpods 살펴보기 ></p>
+                  </li>
+                  <li><a href="#">Airpods 모두 살펴보기</a></li>
+                  <li><a href="#">Airpods Pro 2세대</a></li>
+                  <li><a href="#">Airpods 2세대</a></li>
+                  <li><a href="#">Airpods 3세대</a></li>
+                  <li><a href="#">Airpods Max</a></li>
+                  <li><a href="#">Airpods 비교하기</a></li>
+                </ul>
+                <ul class="product-airpods-category2">
+                  <li>
+                    <p>Airpods 쇼핑하기 ></p>
+                  </li>
+                  <li><a href="#">Airpods 쇼핑하기</a></li>
+                  <li><a href="#">Airpods 액세서리</a></li>
+                </ul>
+                <ul class="product-airpods-category3">
+                  <li>
+                    <p>그 외 Airpods 관련 항목 ></p>
+                  </li>
+                  <li><a href="#">Airpods 지원</a></li>
+                  <li><a href="#">헤드폰을 위한 AppleCare+</a></li>
+                  <li><a href="#">Apple Music</a></li>
+                </ul>
+                <div class="empty__space__fill2"></div>
+              </div>
+            </div>
+            <!-- 제품중 티비 부분 (tab & mobile) -->
+            <div class="product_inner_tv hidden_click_tv">
+              <div class="tv"><a href="#" class="tvClick"><span>TV 및 홈</span><span
+                    class="material-symbols-outlined pc__hidden">arrow_drop_down</span></a></div>
+              <div class="empty__space__fill"></div>
+              <div class="tv_categories on_category_tv">
+                <ul class="product-tv-category1">
+                  <li>
+                    <p>TV 및 홈 살펴보기 ></p>
+                  </li>
+                  <li><a href="#">TV 및 홈 살펴보기</a></li>
+                  <li><a href="#">Apple TV 4K</a></li>
+                </ul>
+                <ul class="product-tv-category2">
+                  <li>
+                    <p>TV 및 홈 쇼핑하기 ></p>
+                  </li>
+                  <li><a href="#">Apple TV 4K 쇼핑하기</a></li>
+                  <li><a href="#">Siri Remote 쇼핑하기</a></li>
+                  <li><a href="#">TV 및 홈 액세서리</a></li>
+                </ul>
+                <ul class="product-tv-category3">
+                  <li>
+                    <p>그 외 TV 및 홈 관련 항목 ></p>
+                  </li>
+                  <li><a href="#">Apple TV 지원</a></li>
+                  <li><a href="#">AppleCare+</a></li>
+                  <li><a href="#">Apple TV 앱</a></li>
+                  <li><a href="#">Apple TV+</a></li>
+                  <li><a href="#">홈 앱</a></li>
+                  <li><a href="#">Apple Music</a></li>
+                  <li><a href="#">Siri</a></li>
+                  <li><a href="#">AirPlay</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 악세사리부분 피씨, 탭, 모바일 공통 -->
+      <div class="menu__accessory">
+        <div class="accessory-content">
+          <div class="store__inner__menu hidden__small">
+            <p>액세서리 쇼핑하기 ></p>
+            <p>액세서리 살펴보기 ></p>
+          </div>
+          <div class="categories">
+            <ul class="accessory-category1">
+              <!-- .full__hidden은 탭,모바일에서만 보이게! pc에서는 안보이게 처리 -->
+              <li class="full__hidden">
+                <p>액세서리 쇼핑하기 ></p>
+              </li>
+              <li><a href="#">액세서리 모두 쇼핑하기</a></li>
+              <li><a href="#">Mac</a></li>
+              <li><a href="#">iPad</a></li>
+              <li><a href="#">iPhone</a></li>
+              <li><a href="#">Apple Watch</a></li>
+              <li><a href="#">AirPods</a></li>
+              <li><a href="#">TV 및 홈</a></li>
+            </ul>
+            <ul class="accessory-category2">
+              <li class="full__hidden">
+                <p>액세서리 살펴보기 ></p>
+              </li>
+              <li><a href="#">Apple 제작 정품</a></li>
+              <li><a href="#">Beats by Dr.Dre</a></li>
+              <li><a href="#">AirTag</a></li>
+            </ul>
+          </div>
+          <img src="./images/menu_accessory.png" alt="이미지_설명" class="accessory-image hidden_media">
+        </div>
+      </div>
+      <!-- 구독부분 피씨, 탭, 모바일 공통 -->
+      <div class="menu__subscribe">
+        <div class="subscribe-content">
+          <div class="store__inner__menu hidden__small">
+            <p>구독 살펴보기 ></p>
+            <p>지원 ></p>
+          </div>
+          <div class="categories">
+            <ul class="subscribe-category1">
+              <!-- .full__hidden은 탭,모바일에서만 보이게! pc에서는 안보이게 처리 -->
+              <li class="full__hidden">
+                <p>구독 살펴보기 ></p>
+              </li>
+              <li><a href="#">엔터테인먼트 & 구독</a></li>
+              <li><a href="#">Apple One</a></li>
+              <li><a href="#">Apple TV+</a></li>
+              <li><a href="#">Apple Music</a></li>
+              <li><a href="#">Apple Arcade</a></li>
+              <li><a href="#">Apple Podcasts</a></li>
+              <li><a href="#">Apple Books</a></li>
+              <li><a href="#">App Store</a></li>
+            </ul>
+            <ul class="subscribe-category2">
+              <li class="full__hidden">
+                <p>지원 ></p>
+              </li>
+              <li><a href="#">Apple TV+ 지원</a></li>
+              <li><a href="#">Apple Music 지원</a></li>
+            </ul>
+          </div>
+          <div class="clip-path-container">
+            <div class="subscribe-video-wrapper">
+              <video src="./video/large.mp4" class="subscribe-video hidden_media" loop autoplay muted></video>
+              <img src="./images/appletv_icon.png" alt="appletv_icon" class="subscribe-img hidden_media">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 고객지원부분 피씨, 탭, 모바일 공통 -->
+      <div class="menu__support">
+        <div class="support-content">
+          <div class="store__inner__menu hidden__small">
+            <p>지원상황 살펴보기 ></p>
+            <p>도움 받기 ></p>
+            <p>유용한 주제 ></p>
+          </div>
+          <div class="categories">
+            <ul class="support-category1">
+              <!-- .full__hidden은 탭,모바일에서만 보이게! pc에서는 안보이게 처리 -->
+              <li class="full__hidden">
+                <p>지원상황 살펴보기 ></p>
+              </li>
+              <li><a href="#">iPhone</a></li>
+              <li><a href="#">Mac</a></li>
+              <li><a href="#">iPad</a></li>
+              <li><a href="#">Watch</a></li>
+              <li><a href="#">AirPods</a></li>
+              <li><a href="#">Music</a></li>
+              <li><a href="#">TV</a></li>
+              <li><a href="#">나의 지원상황 살펴보기</a></li>
+            </ul>
+            <ul class="support-category2">
+              <li class="full__hidden">
+                <p>도움 받기 ></p>
+              </li>
+              <li><a href="#">커뮤니티</a></li>
+              <li><a href="#">보장 상태 확인하기</a></li>
+              <li><a href="#">수리</a></li>
+              <li><a href="#">문의하기</a></li>
+            </ul>
+            <ul class="support-category3">
+              <li class="full__hidden">
+                <p>유용한 주제 ></p>
+              </li>
+              <li><a href="#">AppleCare+ 구입하기</a></li>
+              <li><a href="#">Apple ID 및 암호</a></li>
+              <li><a href="#">청구 및 구독</a></li>
+              <li><a href="#">나의 찾기</a></li>
+              <li><a href="#">손쉬운 사용</a></li>
+            </ul>
+          </div>
+          <img src="./images/menu_support.png" alt="이미지_설명" class="support-image hidden_media">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Seolhwa -->
+  <section id="main">
+    <div class="inner">
+      <div class="main-flex">
+        <div id="main-hero" >
+          <div class="hero-img" onclick="redirectToApple()">
+          </div>
+          <div class="hero-txt">
+            <h2>iPhone 15 Pro</h2>
+            <h3>티타늄. 초강력. 초경량. 초프로.</h3>
+            <div class="hero-link">
+              <a href="https://www.apple.com/kr/iphone-15-pro/">더 알아보기</a>
+              <a href="https://www.apple.com/kr/shop/buy-iphone/iphone-15-pro">구입하기</a>
+            </div>
+          </div>
+        </div>
+        <div id="main-icon">
+          <div class="swiper-container">
+            <div class="icon-container swiper-wrapper">
+              <div id="iconLink1"class="icon-item swiper-slide clickable-icon">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="https://www.apple.com/kr/shop/buy-mac">Mac</a></div>
+              </div>
+              <div id="iconLink2"class="icon-item swiper-slide clickable-icon">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="https://www.apple.com/kr/shop/buy-iphone">iPhone</a></div>
+              </div>
+              <div id="iconLink3"class="icon-item swiper-slide clickable-icon">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="https://www.apple.com/kr/shop/buy-ipad">iPad</a></div>
+              </div>
+              <div id="iconLink4"class="icon-item swiper-slide clickable-icon">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="https://www.apple.com/kr/shop/buy-watch">Apple Watch</a></div>
+              </div>
+              <div id="iconLink5"class="icon-item swiper-slide clickable-icon">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="https://www.apple.com/kr/airpods/">AirPods</a></div>
+              </div>
+              <div id="iconLink6"class="icon-item swiper-slide clickable-icon">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="https://www.apple.com/kr/shop/accessories/all/airtag">AirTag</a></div>
+              </div>
+              <div id="iconLink7"class="icon-item swiper-slide clickable-icon">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="https://www.apple.com/kr/apple-tv-4k/">Apple TV 4K</a></div>
+              </div>
+              <div id="iconLink8"class="icon-item swiper-slide clickable-icon">
+                <div class="icon-img"></div>
+                <div class="icon-txt"><a href="https://www.apple.com/kr/shop/accessories/all">액세서리</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Huiyeon -->
+  <section id="main-slide">
+    <div class="inner">
+      <div class="new-product">
+        <div class="new-product-con">
+          <div class="new-product-subject">
+            <h2>New Product</h2>
+            <h3>최신 제품. <span class="new-br">더 강력하게.</span></h3>
+            <span class="new-subhead">Apple의 혁신은 멈추지 않습니다.</span>
+          </div>
+          <div class="new-detail">
+            <p>
+              우리는 항상 다음 수준으로 <span>나아가려 노력합니다.</span>
+            </p>
+            <p>
+              이제,<span>여러분을 더 큰 강력함과 스타일로</span>맞이합니다.
+            </p>
+            <p>
+              새로운 Apple을 경험하고<span>미래로 나아가는 첫 걸음을 함께 하세요.</span>
+            </p>
+          </div>
+        </div>
+        <div class="new-product-items">
+          <div class="swiper mainSwiper">
+            <div class="swiper-wrapper">
+              <!-- 애플 비전 프로 -->
+              <div class="swiper-slide Apple-Vision-Pro">
+                <div class="AVP-content">
+                  <p class="AVP-title">Apple Vision Pro</p>
+                  <p class="AVP-text">
+                    공간 컴퓨팅. 새로운 시대.
+                    <span>손, 눈, 목소리만으로 나만의 세계를 확장한다.</span>
+                  </p>
+                  <strong>2024년 공개 예정</strong>
+                  <a href="#" class="more">더 알아보기 <i class="fa-solid fa-chevron-right"></i></a><br>
+                  <a href="#" class="more">사전 예약 하기 <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+              </div>
+              <!-- 아이폰 15 프로 -->
+              <div class="swiper-slide iPhone-15-Pro">
+                <div class="ip15pro-content">
+                  <p class="ip15pro-title">
+                    iPhone 15 Pro
+                  </p>
+                  <p class="ip15pro-text">
+                    티타늄. 초강력. 초경량. 초프로.
+                    <span>A17 Pro 등장. 게임의 판도를 바꾸는 칩. 획기적인 성능.</span>
+                  </p>
+                  <a href="#" class="more">더 알아보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+              </div>
+              <!-- 아이패드 에어 -->
+              <div class="swiper-slide iPad-Air">
+                <div class="ipAir-content">
+                  <p class="ipAir-title">iPad Air</p>
+                  <p class="ipAir-text">
+                    가뿐하게. 색다르게. 강력하게.
+                    <span>혁신적인 M1 칩. 초고속 5G. 센터 스테이지 기술의 카메라</span>
+                  </p>
+                  <a href="#" class="more">더 알아보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+              </div>
+              <!-- 애플 워치 -->
+              <div class="swiper-slide Apple-Watch">
+                <div class="AW-content">
+                  <p class="AW-title">Apple Watch Series 9</p>
+                  <p class="AW-text">
+                    보다 똑똑. 보다 또렷. 보다 강력.
+                    <span>혁신적인 성능. 세계에서 가장 인기 있는 시계.</span>
+                  </p>
+                  <a href="#" class="more">더 알아보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+              </div>
+              <!-- 에어팟 프로 -->
+              <div class="swiper-slide AirPods-Pro">
+                <div class="APP-content">
+                  <p class="APP-title">AirPods Pro</p>
+                  <p class="APP-text">
+                    전에 없던 청취 경험. 적응형 오디오.
+                    <span>독보적인 품질. 강화된 액티브 노이즈 캔슬링. 향상된 편리함.</span>
+                  </p>
+                  <a href="#" class="more">더 알아보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+              </div>
+              <!-- 맥 스튜디오 -->
+              <div class="swiper-slide Mac-Studio">
+                <div class="MS-content">
+                  <p class="MS-title">Mac Studio</p>
+                  <p class="MS-text">
+                    강력함의 집약체. 놀라운 콤팩트함. 
+                    <span>어떤 작업 공간이든 창의력 넘치는 작업실로 탈바꿈합니다.</span>
+                  </p>
+                  <a href="#" class="more">더 알아보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Seolhwa -->
+  <section id="special">
+    <div class="inner">
+      <div class="sp-cardWrap">
+        <div class="sp-title">
+          <span>Specialist</span>
+          <h2><span>도움의 손길.</span>언제든, 당신에게 맞는 방식으로.</h2>
+        </div>
+        <div class="sp-card">
+          <div id="box1" class="sp-card-left " onclick="openPopup('popup1')">
+            <div class="sp-card-img"></div>
+            <div class="sp-card-txt">
+              <h2>APPLE 스페셜리스트</h2>
+              <p>스페셜리스트와 함께하는 일대일 쇼핑. 온라인에서도 매장에서도.</p>
+            </div>
+          </div>
+          <div class="sp-card-mdl">
+            <div id="box2" class="sp-card-mdl-top" onclick="openPopup('popup2')">
+              <div class="sp-card-img"></div>
+              <div class="sp-card-txt">
+                <p>무료 개인 맞춤 세션으로 새 기기와 더 친숙해지세요.
+              </div>
+            </div>
+            <div id="box3" class="sp-card-mdl-bottom" onclick="openPopup('popup3')">
+              <div class="sp-card-img"></div>
+              <div class="sp-card-txt">
+                <p>Genius Bar에서 <br> 직접 전문가의 도움을<br> 받을 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="sp-card-right">
+            <div class="sp-card-img"></div>
+            <div class="sp-card-txt">
+              <p>모든 Apple 제품에 대한 지원을 한 곳에서 확인해 보세요.</p>
+            </div>
+          </div>
+          <div class="sp-card-bottom">
+            <div class="sp-card-bottom-left">
+              <div class="sp-card-img"></div>
+              <div class="sp-card-txt">
+                <p>몇 가지 정보를 확인해 주시면 가장 적합한 해결 방법을 알려 드리겠습니다. 전화, 채팅, 이메일 등을 통해 문의해 주세요.</p>
+                <a href="https://getsupport.apple.com/?caller=home&PRKEYS=">지금 시작하기</a>
+              </div>
+            </div>
+            <div class="sp-card-bottom-right">
+              <div class="sp-card-img"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sp-bg-img"><span></span></div>
+      <div class="sp-mb-cardWrap swiper-container">
+        <div class="sp-mb-title">
+          <span>Specialist</span>
+          <h2><span>도움의 손길.</span>언제든, 당신에게 맞는 방식으로.</h2>
+        </div>
+        <div class="sp-mb-card swiper-wrapper">
+          <div id="box1" class="sp-mb-card-left swiper-slide" onclick="openPopup('popup1')">
+            <div class="sp-card-img"></div>
+            <div class="sp-card-txt">
+              <h2>APPLE 스페셜리스트</h2>
+              <p>스페셜리스트와 함께하는 일대일 쇼핑. 온라인에서도 매장에서도.</p>
+            </div>
+          </div>
+          <div class="sp-mb-card-mdl swiper-slide">
+            <div id="box2" class="sp-mb-card-mdl-top" onclick="openPopup('popup2')">
+              <div class="sp-card-img"></div>
+              <div class="sp-card-txt">
+                <p>무료 개인 맞춤 세션으로 새 기기와 더 친숙해지세요.
+              </div>
+            </div>
+            <div id="box3" class="sp-mb-card-mdl-bottom" onclick="openPopup('popup3')">
+              <div class="sp-card-img"></div>
+              <div class="sp-card-txt">
+                <p>Genius Bar에서 직접 전문가의 도움을 받을 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="sp-mb-card-right swiper-slide">
+            <div class="sp-mb-card-right-top">
+              <div class="sp-card-img"></div>
+              <div class="sp-card-txt">
+                <p>모든 Apple 제품에 대한 지원을 한 곳에서 확인해 보세요.</p>
+              </div>
+            </div>
+            <div class="sp-mb-card-right-bottom">
+              <div class="sp-card-img"><span></span></div>
+              <div class="sp-card-txt">
+                <p>몇 가지 정보를 확인해 주시면 가장 적합한 해결 방법을 알려 드리겠습니다. 전화, 채팅, 이메일 등을 통해 문의해 주세요.</p>
+                <a href="https://getsupport.apple.com/?caller=home&PRKEYS=">지금 시작하기</a>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="special-pop">
+      <div id="popup1" class="popup">
+        <div class="popup-content">
+          <span onclick="closePopup('popup1')"></span>
+          <h2>도움을 받아 알맞은 제품을 찾으세요.</h2>
+          <p>스페셜리스트와 함께하는 일대일 온라인 쇼핑. Apple Store 쇼핑 세션도 예약할 수 있습니다.</p>
+          <a href="https://contactretail.apple.com/Help">스페셜리스트와 함께하는 온라인 쇼핑</a><br>
+          <a href="https://www.signtime.apple/retail/kr-KO/ksl">대한민국 수어로 문의하기<span></span></a><br>
+          <a href="https://www.apple.com/kr/retail/instore-shopping-session/">매장 쇼핑 세션 예약하기<span></span></a><br>
+        </div>
+      </div>
+      <div id="popup2" class="popup">
+        <div class="popup-content">
+          <span onclick="closePopup('popup2')"></span>
+          <h2>기초부터 고급 팁까지 모두 알려드립니다.</h2>
+          <p>Apple에서 새 기기를 구입하고 무료 일대일 개인 맞춤 세션을 통해 기기를 최대한 활용하는 방법을 배워보세요.</p>
+          <p>온라인으로 주문하신 제품이 출고되면 온라인 세션을 예약하실 수 있도록 초대를 보내 드립니다. 매장에서 구입하거나 픽업하실 때는 스페셜리스트가 새 기기에 익숙해지도록 도와 드리죠.</p>
+          <a href="https://www.apple.com/kr/shop/personal-session">더 알아보기<span></span></a>
+        </div>
+      </div>
+      <div id="popup3" class="popup">
+        <div class="popup-content">
+          <span onclick="closePopup('popup3')"></span>
+          <h2>지원을 받고, 수리 서비스도 예약하세요. 간단합니다.</h2>
+          <p>온라인에서 전화, 채팅, 이메일로 Apple 지원 서비스를 받아보세요. 가까운 매장을 방문해 직접 서비스를 받아볼 수도 있죠. 전문가들이 기기 설정부터 Apple ID 복구, 액정 교체까지 모든
+            걸 도와 드립니다.</p>
+          <a href="https://www.apple.com/kr/retail/geniusbar/">온라인으로 지원 받기<span></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Naeun -->
+  <section id="accesory">
+    <div class="Title">
+      <p class="Blue">Accessory</p>
+      <p>
+        액세서리.
+        <span>즐겨 사용하는 기기들과 완벽하게 페어링되는 여러 가지 필수품.</span>
+      </p>
+    </div>
+    <div class="swiper mySwiper practice-style">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide practice-style">
+          <div class="inner">
+            <div class="swiper-slide" style="width: 300px; margin-left:  50px;">
+              <img src="./images/악세사리/0001-removebg-preview.png" alt="이미지1" class="img" />
+            </div>
+          </div>
+        </div>
+        <div class=" swiper-slide practice-style">
+          <div class="inner">
+            <div id="imageContainers1">
+              <img id="image1" src="./images/악세사리/case2.png" alt="이미지 1" class="img" />
+              <img id="image2" src="./images/악세사리/case1.png" alt="이미지 2" class="img" />
+              <img id="image3" src="./images/악세사리/case3.png" alt="이미지 3" class="img" />
+              <div class="Text">
+                <p class="red">New</p>
+                <h2>MagSafe형 iPhone 15 실리콘 케이스</h2>
+                <p class="Price">₩69,000</p>
+              </div>
+            </div>
+            <button data-image="image1" class="Button1"></button>
+            <button data-image="image2" class="Button2"></button>
+            <button data-image="image3" class="Button3"></button>
+          </div>
+        </div>
+        <div class="swiper-slide practice-style">
+          <div class="inner">
+            <div id="imageContainers2">
+              <img id="image4" src="./images/악세사리/case2-1.png" alt="이미지 1" class="img" />
+              <img id="image5" src="./images/악세사리/case2-2.png" alt="이미지 1" class="img" />
+              <img id="image6" src="./images/악세사리/case2-3.png" alt="이미지 1" class="img" />
+              <div class="Text">
+                <p class="red">Best</p>
+                <h2>
+                  OtterBox Figura Series Case with MagSafe (iPhone 14 Plus)
+                </h2>
+                <p class="Price">₩69,000</p>
+              </div>
+            </div>
+            <button data-image2="image4" class="Button4"></button>
+            <button data-image2="image5" class="Button5"></button>
+            <button data-image2="image6" class="Button6"></button>
+          </div>
+        </div>
+        <div class="swiper-slide practice-style">
+          <div class="inner">
+            <div id="imageContainers3">
+              <img id="image7" src="./images/악세사리/5-1.png" alt="이미지 1" class="img" />
+              <img id="image8" src="./images/악세사리/5-2.png" alt="이미지 1" class="img" />
+              <img id="image9" src="./images/악세사리/5-3.png" alt="이미지 1" class="img" />
+              <div class="Text">
+                <p class="red">New</p>
+                <h2>MagSafe형 iPhone 15 파인우븐 케이스 - 퍼시픽 블루</h2>
+                <p class="Price">₩85,000</p>
+              </div>
+            </div>
+            <button data-image3="image7" class="Button7"></button>
+            <button data-image3="image8" class="Button8"></button>
+            <button data-image3="image9" class="Button9"></button>
+          </div>
+        </div>
+        <div class="swiper-slide practice-style">
+          <div class="inner">
+            <div id="imageContainers4">
+              <img id="image10" src="./images/악세사리/case3-1.png" alt="이미지 1" class="img" />
+              <img id="image11" src="./images/악세사리/case3-2.png" alt="이미지 1" class="img" />
+              <img id="image12" src="./images/악세사리/case3-3.png" alt="이미지 1" class="img" />
+              <div class="Text">
+                <br />
+                <h2>OtterBox Lumen Series Case (iPhone 14)(MagSafe 호환)</h2>
+                <p class="Price">₩69,000</p>
+              </div>
+            </div>
+            <button data-image4="image10" class="Button10"></button>
+            <button data-image4="image11" class="Button11"></button>
+            <button data-image4="image12" class="Button12"></button>
+          </div>
+        </div>
+        <div class="swiper-slide practice-style">
+          <div class="inner">
+            <div id="imageContainers5">
+              <img id="image13" src="./images/악세사리/case4-1.png" alt="이미지 1" class="img" />
+              <img id="image14" src="./images/악세사리/case4-2.png" alt="이미지 1" class="img" />
+              <img id="image15" src="./images/악세사리/case4-3.png" alt="이미지 1" class="img" />
+              <div class="Text">
+                <br />
+                <h2>iPhone XS 실리콘 케이스 - 드래곤 프루트</h2>
+                <p class="Price">₩55,000</p>
+              </div>
+            </div>
+            <button data-image5="image13" class="Button13"></button>
+            <button data-image5="image14" class="Button14"></button>
+            <button data-image5="image15" class="Button15"></button>
+          </div>
+        </div>
+        <div class="swiper-slide practice-style">
+          <div class="inner">
+            <img src="./images/악세사리/end.JPG" alt="이미지 1" class="img" style="margin-top: 200px">
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <!-- Naeun -->
+  <section id="airpods">
+    <div class="Title">
+      <p class="Blue">Accessory</p>
+      <p>
+        액세서리.
+        <span>즐겨 사용하는 기기들과 완벽하게 페어링되는 여러 가지 필수품.</span>
+      </p>
+    </div>
+    <!-- practice.html Swiper -->
+    <div class="swiper mySwiper practice-style">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide practice-style">
+          <img src="./images/AirPods/001.JPG" style="width: 300px;" />
+        </div>
+        <div class="swiper-slide practice-style">
+          <div class="flip-box">
+            <div id="flip-front">
+              <img src="./images/AirPods/1-1.jpg" />
+              <div class="Text-front">
+                <p class="red">무료각인</p>
+                <h2>AirPods Pro MagSafe <br>
+                  충전 케이스 모델(2세대, USB-C)</h2>
+                <p class="Price">₩359,000</p>
+              </div>
+            </div>
+            <div id="flip-back">
+              <img src="./images/AirPods/2-2.JPG" style="margin-bottom: 200px; width: 300px;" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide practice-style">
+          <div class="flip-box">
+            <div id="flip-front">
+              <img src="./images/AirPods/2-1.jpg" />
+              <div class="Text-front">
+                <p class="red">무료각인</p>
+                <h2>AirPods(3세대) MagSafe<br>
+                  충전 케이스 모델</h2>
+                <p class="Price">₩269,000</p>
+              </div>
+            </div>
+            <div id="flip-back">
+              <img src="./images/AirPods/269.JPG" style="margin-bottom: 200px; width: 250px;" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide practice-style">
+          <div class="flip-box">
+            <div id="flip-front">
+              <img src="./images/AirPods/front/3-1.jpg" />
+              <div class="Text-front">
+                <p class="red">무료각인</p>
+                <h2>AirPods(2세대)</h2>
+                <p class="Price">₩199,000</p>
+              </div>
+            </div>
+            <div id="flip-back">
+              <img src="./images/AirPods/3-2.JPG" style="margin-bottom: 260px; width: 300px;" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide practice-style">
+          <div class="flip-box">
+            <div id="flip-front">
+              <img src="./images/AirPods/4-3-removebg-preview.png" />
+              <div class="Text-front">
+                <p class="red">무료 각인</p>
+                <h2>AirPods Max 구입하기</h2>
+                <p class="Price">₩769,000</p>
+              </div>
+            </div>
+            <div id="flip-back">
+              <img src="./images/AirPods/769.JPG" style="margin-bottom: 240px; width: 300px;" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide practice-style">
+          <div class="flip-box">
+            <div id="flip-front">
+              <img src="./images/AirPods/5-1.jpg" />
+              <div class="Text-front">
+                <p class="red">New</p>
+                <h2>Beats Studio Buds True Wireless<br>
+                  노이즈 감쇠 이어폰 - 블랙</h2>
+                <p class="Price">₩199,000</p>
+              </div>
+            </div>
+            <div id="flip-back">
+              <img src="./images/AirPods/5-2.JPG" style="margin-bottom: 230px; width: 300px;" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide practice-style">
+          <div class="flip-box">
+            <div id="flip-front">
+              <img src="./images/AirPods/6-1.jpg" />
+              <div class="Text-front">
+                <p class="red">New</p>
+                <h2>Beats Studio Buds + <br>
+                  진정한 무선 노이즈 캔슬링 <br>
+                  이어버드 - 투명</h2>
+                <p class="Price">₩229,000</p>
+              </div>
+            </div>
+            <div id="flip-back">
+              <img src="./images/AirPods/229.JPG" style="margin-bottom: 200px; width: 300px;" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <!-- Huiyeon -->
+  <section id="service">
+    <div class="inner">
+      <div class="subject">
+        <h2>Subscribe &amp; Special Discount</h2>
+        <h3>Apple의 다양한 서비스와 독특한 특별할인 혜택으로 <span class="serv-br">빠르고 스마트한 즐거움을 경험하세요.</span></h3>
+      </div>
+      <div class="serv-contents">
+        <ul class="serv-items">
+          <li class="serv-appleTV serv-item">
+            <div class="serv-view-deactive serv-viewD-appleTV">
+              <div class="serv-viewD-text">
+                <p class="serv-viewD-title">
+                  Apple TV+
+                </p>
+                <p class="serv-viewD-content">
+                  Apple 기기를 구입하면<br>Apple TV+가 3개월 무료.
+                </p>
+              </div>
+              <span class="appleTV-logo"></span>
+            </div>
+            <div class="serv-view-active serv-viewA-appleTV">
+              <div class="serv-viewA-text">
+                <p class="serv-viewA-title">
+                  Apple Original 콘텐츠는 오직 Apple TV+에서만.
+                </p>
+                <p class="serv-viewA-content">
+                  Apple TV+는 수상에 빛나는 시리즈물, 획기적인 다큐멘터리, 어린이용 콘텐츠 등 다양한 Apple Original 콘텐츠를 시청할 수 있는 스트리밍 서비스입니다. 
+                </p>
+                <p class="serv-viewA-content">
+                  또한, 매달 새로운 Apple Original 콘텐츠가 추가됩니다.
+                </p>
+              </div>
+              <a href="#">Apple TV+ 지금 시청하기</a>
+            </div>
+          </li>
+          <li class="serv-enter serv-item">
+            <div class="serv-view-deactive serv-viewD-enter">
+              <div class="serv-viewD-text">
+                <p class="serv-viewD-title">
+                  Apple One
+                </p>
+                <p class="serv-viewD-content">
+                  다양한 Apple 서비스.<br>한번의 간편한 가입.
+                </p>
+              </div>
+              <span class="appleOne-logo"></span>
+            </div>
+            <div class="serv-view-active serv-viewA-enter">
+              <div class="serv-viewA-text">
+                <p class="serv-viewA-title">
+                  Apple 최고의 서비스, 모두 한자리에.
+                </p>
+                <p class="serv-viewA-content">
+                  Apple One은 최대 200GB의 iCloud+ 저장공간을 비롯한 4가지 Apple 서비스를 보다 저렴한 하나의 월간 요금제로 묶어 사용할 수 있는 구독 서비스입니다.
+                </p>
+                <p class="serv-viewA-content">
+                  부담은 줄이고, 즐거움을 키우는 그야말로 최고의 선택입니다.
+                </p>
+              </div>
+              <a href="#">Apple One 무료 체험하기</a>
+            </div>
+          </li>
+          <li class="serv-appleHome serv-item">
+            <div class="serv-view-deactive serv-viewD-appleHome">
+              <div class="serv-viewD-text">
+                <p class="serv-viewD-title">
+                  Apple Home
+                </p>
+                <p class="serv-viewD-content">
+                  앱 하나로<br>집안 전체를 관리하는<br>스마트함.
+                </p>
+              </div>
+              <span class="appleHome-logo"></span>
+            </div>
+            <div class="serv-view-active serv-viewA-appleHome">
+              <div class="serv-viewA-text">
+                <p class="serv-viewA-title">
+                  더 스마트한 집, 스마트한 기반에서부터.
+                </p>
+                <p class="serv-viewA-content">
+                  ‘홈’ 앱은 당신이 사용하는 모든 스마트 홈 액세서리를 당신이 갖고 있는 모든 Apple 기기에서 더욱 간편하게 제어할 수 있게 해줍니다.
+                </p>
+                <p class="serv-viewA-content">
+                  당신의 사생활을 철저하게 보호해 주는 건 기본이죠.
+                </p>
+              </div>
+              <a href="#">Apple Home 구석구석 살펴보기</a>
+            </div>
+          </li>
+          <li class="serv-appleCare serv-item">
+            <div class="serv-view-deactive serv-viewD-appleCare">
+              <div class="serv-viewD-text">
+                <p class="serv-viewD-title">
+                  Apple Care
+                </p>
+                <p class="serv-viewD-content">
+                  모든 Apple 제품에 대한<br>원스톱 솔루션.
+                </p>
+              </div>
+              <span class="appleCare-logo"></span>
+            </div>
+            <div class="serv-view-active serv-viewA-appleCare">
+              <div class="serv-viewA-text">
+                <p class="serv-viewA-title">
+                  Apple 제품의 전문가가 제공하는<br>서비스 및 지원.
+                </p>
+                <p class="serv-viewA-content">
+                  Apple은 하드웨어, 운영체제 그리고 다양한 응용 프로그램을 모두 만들기 때문에 Apple 제품은 진정한 통합 시스템을 이루고 있습니다.
+                </p>
+                <p class="serv-viewA-content">
+                  오직 AppleCare 제품만이 Apple 전문가의 원스톱 서비스와 지원을 제공합니다.
+                </p>
+              </div>
+              <a href="#">Apple Care 서비스 신청하기</a>
+            </div>
+          </li>
+          <li class="serv-school serv-item">
+            <div class="serv-view-deactive serv-viewD-school">
+              <div class="serv-viewD-text">
+                <p class="serv-viewD-title">
+                  교육
+                </p>
+                <p class="serv-viewD-content">
+                  교육 할인가로<br>Mac 또는 iPad를<br>더 저렴하게.
+                </p>
+              </div>
+              <span class="school-logo"></span>
+            </div>
+            <div class="serv-view-active serv-viewA-school">
+              <div class="serv-viewA-text">
+                <p class="serv-viewA-title">
+                  새로운 Mac과 iPad를<br>교육 할인가로 만나보세요.
+                </p>
+                <p class="serv-viewA-content">
+                  대학 재학생과 신입생, 그리고 직급과 관계없이 모든 교직원이 혜택을 이용할 수 있습니다.
+                </p>
+                <p class="serv-viewA-content">
+                  먼저 자격 여부부터 확인하세요.
+                </p>
+              </div>
+              <a href="#">UNiDAYS를 이용해 확인하기</a>
+            </div>
+          </li>
+          <li class="serv-company serv-item">
+            <div class="serv-view-deactive serv-viewD-company">
+              <div class="serv-viewD-text">
+                <p class="serv-viewD-title">
+                  비즈니스
+                </p>
+                <p class="serv-viewD-content">
+                  대기업부터 중소기업까지<br>Apple이 함께 합니다.
+                </p>
+              </div>
+              <span class="company-logo"></span>
+            </div>
+            <div class="serv-view-active serv-viewA-company">
+              <div class="serv-viewA-text">
+                <p class="serv-viewA-title">
+                  일이지만 더 멋지게. Apple at Work.
+                </p>
+                <p class="serv-viewA-content">
+                  계약서 서명, 근무 시간 기록부 관리, 송장 취급 등 다양한 업무를 종이 없이 편리하게 처리할 수 있습니다.
+                </p>
+                <p class="serv-viewA-content">
+                  간편한 업무 환경을 구축하는 방법이 궁금하시다면 언제든지 문의해주세요.
+                </p>
+              </div>
+              <a href="#">전문가와 상담하기</a>
+            </div>
+          </li>
+          <li class="serv-refurbish serv-item">
+            <div class="serv-view-deactive serv-viewD-refurbish">
+              <div class="serv-viewD-text">
+                <p class="serv-viewD-title">
+                  인증 리퍼비쉬 제품
+                </p>
+                <p class="serv-viewD-content">
+                  1년 보증이 제공되는<br>리퍼비쉬 Apple 제품을<br>쇼핑하세요.
+                </p>
+              </div>
+              <span class="refurbish-logo"></span>
+            </div>
+            <div class="serv-view-active serv-viewA-refurbish">
+              <div class="serv-viewA-text">
+                <p class="serv-viewA-title">
+                  Apple 품질이 보장됩니다.
+                </p>
+                <p class="serv-viewA-content">
+                  모든 Apple 인증 리퍼비쉬 제품은 철저한 기능 테스트를 포함한 엄격한 리퍼비쉬 프로세스를 거치고 있으며, 최대 15%의 특별 할인이 적용됩니다.
+                </p>
+                <p class="serv-viewA-content">
+                  또한, 새 화이트 상자에 포장되어 무료 배송 및 반품 혜택과 함께 배송됩니다.
+                </p>
+              </div>
+              <a href="#">모든 리퍼비쉬 제품 둘러보기</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- Chaerin -->
+  <footer>
+    <div class="footer__inner">
+      <div class="footer__info">
+        <p>사업자등록번호 : 120-81-84429 | 통신판매업신고번호 : 제 2011-서울강남-00810호</p>
+        <p>대표이사 : PETER DENWOOD | 주소 : 서울 특별시 강남구 영동대로 517</p>
+        <p>대표전화 : 080-330-8877 | 팩스 : 02-6928-0000</p>
+      </div>
+      <div class="footer__texts">
+        <!-- 약관 팝업 열리는 버튼 -->
+        <button class="show_btn" onclick="showPopup()">약관 보기</button>
+        <!-- 팝업 안의 약관 내용들 -->
+        <div class="footer__popup" id="popup">
+          <h3>이용약관</h3>
+          <div class="footer__text1">
+            <p>* 신규 가입자에게만 적용됩니다. 멤버십은 거주 지역의 월 요금으로 자동 갱신되며, 해지 시 종료됩니다. <span class="material-symbols-outlined zoom1">add<span>더보기</span></span></p>
+            <p class="open1">제한 사항 및 기타 <a href="#">약관</a>이 적용됩니다. 구입한 기기 수에 상관없이, 무료 체험 혜택은 Apple ID당 한 번만 제공됩니다. 본 프로모션은 Apple Music의 다른 무료 체험 또는 프로모션과 중복 적용되지 않습니다. 적용 대상 오디오 기기 소유: 본 프로모션은 한정된 기간 동안 신규 가입자에게만 적용되며, 신규 가입자는 적용 대상 기기를 iOS 15 또는 iPadOS 15 이후 버전이 설치된 Apple 기기에 연결해야 합니다. 무료 체험 혜택은 적용 대상 기기 페어링 이후 3개월 안에 신청할 수 있습니다. 적용 대상 오디오 기기를 이미 소유하고 있는 경우 새로 구입하지 않아도 혜택을 받을 수 있습니다. 새 iPhone 구입 및 활성화: 본 프로모션은 한정된 기간 동안 새 iPhone을 구입하고 활성화한 신규 가입자에게만 적용됩니다. 무료 체험 혜택은 적용 대상 iPhone 활성화 이후 3개월 안에 신청할 수 있습니다.</p>
+          </div>
+          <div class="footer__text2">
+            <p>* 신규 가입자 및 조건에 부합하는 재가입자에게만 적용됩니다. <span class="material-symbols-outlined zoom2">add<span>더보기</span></span></p>
+            <p class="open2">무료 체험 기간이 끝나면 월 6,500원에 이용할 수 있습니다. 본인 또는 가족 구성원이 구입한 기기 수에 상관없이, 무료 체험 혜택은 Apple ID당 한 번 또는 본인이 ‘가족 공유’ 그룹의 구성원일 경우 그룹당 한 번만 제공됩니다. 본인 또는 가족 구성원이 이미 Apple TV+ 3개월 또는 1년 무료 체험 혜택을 이용한 경우에는 이 혜택을 이용할 수 없습니다. 무료 체험 혜택은 적용 대상 기기 활성화 이후 3개월 안에 신청할 수 있습니다. 멤버십은 매월 자동으로 갱신되며, 해지 시 종료됩니다. 특정 제한 사항 및 기타 <a href="#">약관</a>이 적용됩니다.</p>
+          </div>
+          <div class="footer__text3">
+            <p>1. 보상 판매 프로그램은 Apple의 파트너이자 독립적으로 운영되는 제3의 업체에 의해 제공됩니다. <span class="material-symbols-outlined zoom3">add<span>더보기</span></span></p>
+            <p class="open3">Apple 및 Apple의 계열사는 고객과 파트너 간 계약의 당사자가 아닙니다. 보상 판매 견적은 예상 금액이며 실제 보상 판매 금액은 예상 금액보다 낮을 수 있습니다. 보상 판매 금액은 보상 판매 대상이 되는 제품의 상태, 연도, 구성에 따라 달라집니다.일부 기기는 보상 판매 대상이 아닙니다. 크레딧 또는 Apple Store Gift Card로 보상 판매를 받으려면 19세 이상이어야 합니다. 보상 판매 금액은 적용 가능한 새 기기 구입 시 적용하거나 Apple Store Gift Card로 받을 수 있습니다. 최종 확정 금액은 보상 판매 대상 기기를 수령한 후, 예상 금액 산정 시 제시한 기기의 설명과 일치하는지 비교 검수 후 정해집니다. 부가세는 새로 구입한 기기의 총액을 바탕으로 부과됩니다. 일부 매장에서는 보상 판매를 제공하지 않으며, 매장 내 보상 판매와 온라인 보상 판매 프로그램 간 내용에 차이가 있을 수 있습니다.일부 매장은 추가 요구 사항이 있을 수 있습니다. Apple의 보상 판매 파트너사는 어떤 보상 판매도 거래를 거부하거나, 보상 판매 수량을 제한할 권리를 보유합니다. 적용 가능 기기의 보상 판매 및 재활용에 대한 자세한 내용은 Apple의 보상 판매 파트너사에서 확인할 수 있습니다. 규제 및 제한이 적용될 수 있습니다.</p>
+          </div>
+          <div class="footer__text4">
+            <p>2. <strong>이용 약관</strong> 위 할부 서비스는 Apple Online Store, Apple 전화 판매 및 Apple 리테일 매장에서 구입하는 경우에만 이용할 수 있습니다. <span class="material-symbols-outlined zoom4">add<span>더보기</span></span></p>
+            <p class="open4">할부 서비스는 신용 카드 발급사인 신한, BC, KB, NH, 롯데, 삼성, 현대, 하나, KEB 및 시티은행에서 제공합니다. 모든 할부 구입은 신용 카드 발급사의 승인을 받아야 합니다. 신용 카드 발급사에서 할부 구입을 승인해 주지 않는 경우에도 Apple 직원에게 승인 거부 사유가 전달되지 않습니다. 할부 구입에 대한 승인 결과는 신용 카드 발급사에 문의하십시오. 할부 조건, 수수료, 청구액 등은 신용 카드 발급사에 문의하십시오. 청구액은 카드 명세서에 표시됩니다. 할부 서비스를 이용하려면 한국 거주자여야 합니다.<br/>
+            할부 서비스를 이용하려면 구입 시 현지 발급 신용 카드 또는 현지 발급 제휴 카드(Visa, Mastercard, AMEX, China Union Pay)를 사용해야 합니다. 해외 신용 카드(한국 외 다른 국가 또는 지역에서 발급 받은 신용 카드), 직불/체크 카드 및 현지 발급/제휴 법인 카드는 할부 서비스를 이용할 수 없습니다. 할부는 광고 가격 또는 정찰 가격을 기준으로 합니다. 모든 주문 제품은 무료 배송됩니다.
+            이 정보는 2021년 03월 16일 기준 최신 정보입니다.</p>
+          </div>
+          <div class="footer__text5">
+            <p>3. 특별 할인가는 이용 자격을 갖춘 고객에게 적용됩니다. <span class="material-symbols-outlined zoom5">add<span>더보기</span></span></p>
+            <p class="open5">특별 할인 혜택을 받는 방법에 관한 자세한 내용은 매장 내 Apple 스페셜리스트에게 문의하거나 080-330-8877에 전화로 문의하시기 바랍니다.</p>
+          </div>
+          <div class="footer__text6">
+            <p>보다 오래 안심할 수 있도록. 이제 AppleCare+가 우발적인 손상에 대한 수리 서비스를 횟수 제한 없이 제공합니다.</p>
+          </div>
+          <!-- 약관 팝업 닫는 버튼 -->
+          <button class="close_btn" onclick="footerClosePopup()">닫기</button>
+        </div>
+      </div>
+    </div>
+    <div class="border_line"></div>
+    <div class="global_footer_contents">
+      <div class="contents_inner_top">
+        <div class="footer_logo">
+          <a href="#"><img src="./images/ft_logo.png" alt=""></a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <p>Apple Store 온라인</p>
+        </div>
+      </div>
+      <!-- 사이트맵 pc버전 -->
+      <div class="contents_inner_bottom_pc">
+        <div class="footer__categories_pc">
+          <div class="footer__category1">
+            <ul>
+              <p>쇼핑 및 알아보기</p>
+              <li><a href="#">Store</a></li>
+              <li><a href="#">Mac</a></li>
+              <li><a href="#">iPad</a></li>
+              <li><a href="#">iPhone</a></li>
+              <li><a href="#">Watch</a></li>
+              <li><a href="#">AirPods</a></li>
+              <li><a href="#">TV 및 홈</a></li>
+              <li><a href="#">AirTag</a></li>
+              <li><a href="#">액세서리</a></li>
+            </ul>
+            <ul>
+              <p>Apple 지갑</p>
+              <li><a href="#">지갑</a></li>
+            </ul>
+          </div>
+          <div class="footer__category2">
+            <ul>
+              <p>계정</p>
+              <li><a href="#">Apple ID 관리</a></li>
+              <li><a href="#">Apple Store 계정</a></li>
+              <li><a href="#">iCloud.com</a></li>
+            </ul>
+            <ul>
+              <p>엔터테인먼트</p>
+              <li><a href="#">Apple One</a></li>
+              <li><a href="#">Apple TV+</a></li>
+              <li><a href="#">Apple Music</a></li>
+              <li><a href="#">Apple Arcade</a></li>
+              <li><a href="#">Apple Podcasts</a></li>
+              <li><a href="#">Apple Books</a></li>
+              <li><a href="#">App Store</a></li>
+            </ul>
+          </div>
+          <div class="footer__category3">
+            <ul>
+              <p>Apple Store</p>
+              <li><a href="#">매장 찾기</a></li>
+              <li><a href="#">Genius Bar</a></li>
+              <li><a href="#">Today at Apple</a></li>
+              <li><a href="#">Apple 캠프</a></li>
+              <li><a href="#">Apple Store 앱</a></li>
+              <li><a href="#">인증 리퍼비쉬 제품</a></li>
+              <li><a href="#">Apple Trade In</a></li>
+              <li><a href="#">할부 방식</a></li>
+              <li><a href="#">주문 상태</a></li>
+              <li><a href="#">쇼핑 도움말</a></li>
+            </ul>
+          </div>
+          <div class="footer__category4">
+            <ul>
+              <p>비즈니스</p>
+              <li><a href="#">Apple과 비즈니스</a></li>
+              <li><a href="#">비즈니스를 위한 제품 쇼핑하기</a></li>
+            </ul>
+            <ul>
+              <p>교육</p>
+              <li><a href="#">Apple 그리고 교육</a></li>
+              <li><a href="#">초중고용 제품 쇼핑하기</a></li>
+              <li><a href="#">대학 생활을 위한 제품 쇼핑하기</a></li>
+            </ul>
+          </div>
+          <div class="footer__category5">
+            <ul>
+              <p>Apple의 가치관</p>
+              <li><a href="#">손쉬운 사용</a></li>
+              <li><a href="#">환경</a></li>
+              <li><a href="#">개인정보 보호</a></li>
+              <li><a href="#">협력업체에 대한 책임</a></li>
+            </ul>
+            <ul>
+              <p>Apple 정보</p>
+              <li><a href="#">Newsroom</a></li>
+              <li><a href="#">Apple 리더십</a></li>
+              <li><a href="#">채용 안내</a></li>
+              <li><a href="#">윤리 및 규정 준수</a></li>
+              <li><a href="#">이벤트</a></li>
+              <li><a href="#">일자리 창출</a></li>
+              <li><a href="#">Apple 연락처</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- 사이트맵 모바일&패드버전 -->
+      <div class="contents_inner_bottom_mo">
+        <div class="footer__categories_mo">
+          <!-- 쇼핑 및 알아보기 -->
+          <div class="footer__category_inner1">
+            <a href="#">쇼핑 및 알아보기</a>
+            <span class="material-symbols-outlined arrow_down1">keyboard_arrow_down</span>
+          </div>
+          <div class="category__show1">
+            <ul>
+              <li><a href="#">Store</a></li>
+              <li><a href="#">Mac</a></li>
+              <li><a href="#">iPad</a></li>
+              <li><a href="#">iPhone</a></li>
+              <li><a href="#">Watch</a></li>
+              <li><a href="#">AirPods</a></li>
+              <li><a href="#">TV 및 홈</a></li>
+              <li><a href="#">AirTag</a></li>
+              <li><a href="#">액세서리</a></li>
+            </ul>
+          </div>
+          <!-- Apple 지갑 -->
+          <div class="footer__category_inner2">
+            <a href="#">Apple 지갑</a>
+            <span class="material-symbols-outlined arrow_down2">keyboard_arrow_down</span>
+          </div>
+          <div class="category__show2">
+            <ul>
+              <li><a href="#">지갑</a></li>
+            </ul>
+          </div>
+          <!-- 계정 -->
+          <div class="footer__category_inner3">
+            <a href="#">계정</a>
+            <span class="material-symbols-outlined arrow_down3">keyboard_arrow_down</span>
+          </div>
+          <div class="category__show3">
+            <ul>
+              <li><a href="#">Apple ID 관리</a></li>
+              <li><a href="#">Apple Store 계정</a></li>
+              <li><a href="#">iCloud.com</a></li>
+            </ul>
+          </div>
+          <!-- 엔터테인먼트 -->
+          <div class="footer__category_inner4">
+            <a href="#">엔터테인먼트</a>
+            <span class="material-symbols-outlined arrow_down4">keyboard_arrow_down</span>
+          </div>
+          <div class="category__show4">
+            <ul>
+              <li><a href="#">Apple One</a></li>
+              <li><a href="#">Apple TV+</a></li>
+              <li><a href="#">Apple Music</a></li>
+              <li><a href="#">Apple Arcade</a></li>
+              <li><a href="#">Apple Podcasts</a></li>
+              <li><a href="#">Apple Books</a></li>
+              <li><a href="#">App Store</a></li>
+            </ul>
+          </div>
+          <!-- Apple Store -->
+          <div class="footer__category_inner5">
+            <a href="#">Apple Store</a>
+            <span class="material-symbols-outlined arrow_down5">keyboard_arrow_down</span>
+          </div>
+          <div class="category__show5">
+            <ul>
+              <li><a href="#">매장 찾기</a></li>
+              <li><a href="#">Genius Bar</a></li>
+              <li><a href="#">Today at Apple</a></li>
+              <li><a href="#">Apple 캠프</a></li>
+              <li><a href="#">Apple Store 앱</a></li>
+              <li><a href="#">인증 리퍼비쉬 제품</a></li>
+              <li><a href="#">Apple Trade In</a></li>
+              <li><a href="#">할부 방식</a></li>
+              <li><a href="#">주문 상태</a></li>
+              <li><a href="#">쇼핑 도움말</a></li>
+            </ul>
+          </div>
+          <!-- 비즈니스 -->
+          <div class="footer__category_inner6">
+            <a href="#">비즈니스</a>
+            <span class="material-symbols-outlined arrow_down6">keyboard_arrow_down</span>
+          </div>
+          <div class="category__show6">
+            <ul>
+              <li><a href="#">Apple과 비즈니스</a></li>
+              <li><a href="#">비즈니스를 위한 제품 쇼핑하기</a></li>
+            </ul>
+          </div>
+          <!-- 교육 -->
+          <div class="footer__category_inner7">
+            <a href="#">교육</a>
+            <span class="material-symbols-outlined arrow_down7">keyboard_arrow_down</span>
+          </div>
+          <div class="category__show7">
+            <ul>
+              <li><a href="#">Apple 그리고 교육</a></li>
+              <li><a href="#">초중고용 제품 쇼핑하기</a></li>
+              <li><a href="#">대학 생활을 위한 제품 쇼핑하기</a></li>
+            </ul>
+          </div>
+          <!-- Apple의 가치관 -->
+          <div class="footer__category_inner8">
+            <a href="#">Apple의 가치관</a>
+            <span class="material-symbols-outlined arrow_down8">keyboard_arrow_down</span>
+          </div>
+          <div class="category__show8">
+            <ul>
+              <li><a href="#">손쉬운 사용</a></li>
+              <li><a href="#">환경</a></li>
+              <li><a href="#">개인정보 보호</a></li>
+              <li><a href="#">협력업체에 대한 책임</a></li>
+            </ul>
+          </div>
+          <!-- Apple 정보 -->
+          <div class="footer__category_inner9">
+            <a href="#">Apple 정보</a>
+            <span class="material-symbols-outlined arrow_down9">keyboard_arrow_down</span>
+          </div>
+          <div class="category__show9">
+            <ul>
+              <li><a href="#">Newsroom</a></li>
+              <li><a href="#">Apple 리더십</a></li>
+              <li><a href="#">채용 안내</a></li>
+              <li><a href="#">윤리 및 규정 준수</a></li>
+              <li><a href="#">이벤트</a></li>
+              <li><a href="#">일자리 창출</a></li>
+              <li><a href="#">Apple 연락처</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mini_info_pc">
+      <div class="mini_info">
+        <p>다양한 쇼핑 방법: <span><a href="#">Apple Store를 방문</a></span>하거나, <span><a href="#">리셀러</a></span>를 찾아보거나,
+          080-330-8877번으로 전화하세요.</p>
+      </div>
+      <div class="border_line"></div>
+      <div class="global_footer_mini">
+        <div class="mini_copyright">
+          Copyright © 2023 Apple Inc. 모든 권리 보유.
+        </div>
+        <div class="mini_links">
+          <ul>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">약관</a></li>
+            <li><a href="#">판매 및 환불</a></li>
+            <li><a href="#">법적 고지</a></li>
+            <li><a href="#">사이트 맵</a></li>
+          </ul>
+          <p><a href="#">대한민국</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="mini_info_mo">
+      <div class="mini_info">
+        <p>다양한 쇼핑 방법: <span><a href="#">Apple Store를 방문</a></span>하거나, <span><a href="#">리셀러</a></span>를 찾아보거나,
+          080-330-8877번으로 전화하세요.</p>
+      </div>
+      <div class="global_footer_mini">
+        <p><a href="#">대한민국</a></p>
+        <div class="mini_copyright">
+          Copyright © 2023 Apple Inc. 모든 권리 보유.
+        </div>
+        <div class="mini_links">
+          <ul>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">약관</a></li>
+            <li><a href="#">판매 및 환불</a></li>
+            <li><a href="#">법적 고지</a></li>
+            <li><a href="#">사이트 맵</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="to-top">
+    <span><i class="fa-solid fa-caret-up"></i></span>
+    <span>TOP</span>
+  </div>
+</body>
+</html>

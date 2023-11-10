@@ -1,0 +1,284 @@
+@charset "utf-8";
+
+ /* Common Styles */
+ @font-face {
+   font-family: 'KOTRA_GOTHIC';
+   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/KOTRA_GOTHIC.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+ }
+
+
+ /* 텍스트 */
+#accesory .Title, #airpods .Title {
+   line-height: 1.5;
+   position: relative;
+   font-family: 'KOTRA_GOTHIC';
+   font-weight: 900;
+   font-size: 24px;
+   margin: 20px;
+   top: 8px;
+   width: 700px;
+   display: block;
+ }
+
+ #accesory span, #airpods span {
+   color: #6e6e6e;
+ }
+
+ #accesory .Blue, #airpods .Blue {
+   color: #007AFF;
+   font-size: 14px;
+ }
+
+ #accesory .Price, #airpods .Price {
+  margin: 1rem 0;
+   font-size: 14px;
+ }
+
+ #accesory h2, #airpods h2 {
+  margin: 1rem 0; 
+  font-size: 16px;
+   padding: 5px;
+   font-weight: 500;
+ }
+
+ #accesory .red, #airpods .red {
+   color: red;
+   font-size: 12px;
+   font-weight: 300;
+ }
+
+ #accesory .Text-front, #airpods .Text-front {
+   position: absolute;
+   margin-top: 270px;
+ }
+
+
+ #accesory .inners, #airpods .inners {
+   margin-left: 25px;
+ }
+
+ #accesory .inner .img, #airpods .inner .img {
+   width: 400px;
+   margin-top: 50px;
+   max-width: 100%;
+ }
+
+ #accesory .inners>.img, #airpods .inners>.img {
+   width: 350px;
+   margin-right: 50px;
+ }
+
+ /* 스와이퍼 슬라이드 */
+ #accesory .swiper-slide, #airpods .swiper-slide {
+   width: 420px;
+   padding: 20px;
+   height: 680px;
+   background-color: #fff;
+   overflow: hidden;
+ }
+
+ #accesory .swiper-slide, #airpods .swiper-slide {
+   width: 100%;
+ }
+
+ #accesory .swiper-slide img, #airpods .swiper-slide img {
+   width: 100%;
+   object-fit: cover;
+   max-width: 100%;
+ }
+
+
+ /* practice.html styles */
+ #accesory .practice-style.swiper,
+ #airpods .practice-style.swiper {
+   margin: 20px 0;
+   width: 100%;
+   /* height: 680px; */
+ }
+
+ #accesory .practice-style.swiper-slide,
+ #airpods .practice-style.swiper-slide {
+   border-radius: 20px;
+   text-align: center;
+   font-size: 18px;
+   background: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 10px;
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+ }
+
+ /* flipSwiper.html styles */
+
+ /* .flip-style.swiper-slide img {
+   width: 250px;
+   height: auto;
+   margin-top: 50px;
+   max-width: 100%;
+ } */
+
+ #accesory .flip-box, #airpods .flip-box {
+   width: 100%;
+   height: 100%;
+   transform-style: preserve-3d;
+   transition: transform 0.5s;
+ }
+
+ #accesory .flip-box.flip, #airpods .flip-box.flip {
+   transform: rotateY(180deg);
+ }
+
+ #accesory .flip-container, #airpods .flip-container {
+   perspective: 1000px;
+   width: 200px;
+   height: 200px;
+ }
+
+ #accesory #flip-front img, #airpods #flip-front img {
+   margin-bottom: 80px;
+   width: 230px;
+ }
+
+ #accesory #flip-back img, #airpods #flip-back img {
+   margin-top: 100px;
+   width: 250px;
+ }
+
+ #accesory #flip-front,
+ #accesory #flip-back,
+ #airpods #flip-front,
+ #airpods #flip-back {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   backface-visibility: hidden;
+ }
+
+ #accesory #flip-front, #airpods #flip-front {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ #accesory #flip-back, #airpods #flip-back {
+   transform: rotateY(180deg);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+
+ /* BUTTON */
+ #accesory .Button1,
+ #accesory .Button2,
+ #accesory .Button3,
+ #accesory .Button4,
+ #accesory .Button5,
+ #accesory .Button6,
+ #accesory .Button7,
+ #accesory .Button8,
+ #accesory .Button9 {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   border: none;
+   background-repeat: no-repeat;
+   margin-bottom: 20px;
+ }
+
+ #accesory .inner .Button1 {
+   background-color: #7D8C7D;
+ }
+
+ #accesory .inner .Button2 {
+   background-color: #F2AD85;
+ }
+
+ #accesory .inner .Button3 {
+   background-color: #A7C1D9;
+ }
+
+ #accesory .inner .Button4 {
+   background-color: #A65198;
+ }
+
+ #accesory .inner .Button5 {
+   background-color: #F2B035;
+ }
+
+ #accesory .inner .Button6 {
+   background-color: #736A68;
+ }
+
+ #accesory .Button10,
+ #accesory .Button11,
+ #accesory .Button12,
+ #accesory .Button13,
+ #accesory .Button14,
+ #accesory .Button15 {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   border: none;
+   background-repeat: no-repeat;
+   margin-top: 10px;
+ }
+
+ #accesory .inner .Button7 {
+   background-color: #734656;
+ }
+
+ #accesory .inner .Button8 {
+   background-color: #8C6E5D;
+ }
+
+ #accesory .inner .Button9 {
+   background-color: #364F59;
+ }
+
+ #accesory .inner .Button10 {
+   background-color: #BFBFBF;
+ }
+
+ #accesory .inner .Button11 {
+   background-color: #404040;
+ }
+
+ #accesory .inner .Button12 {
+   background-color: #8565A6;
+ }
+
+ #accesory .inner .Button13 {
+   background-color: #8C8A68;
+ }
+
+ #accesory .inner .Button14 {
+   background-color: #D9C3C1;
+ }
+
+ #accesory .inner .Button15 {
+   background-color: #465973;
+ }
+
+
+ #accesory #flip-back button, #airpods #flip-back button {
+   display: none;
+ }
+
+ #accesory #flip-front button, #airpods #flip-front button {
+   display: block;
+ }
+
+ @media (min-width: 300px) and (max-width: 599px) {
+
+  #accesory h2, #airpods h2 {
+     font-size: 14px;
+   }
+
+   #accesory p, #airpods p {
+     font-size: 15px;
+   }
+ }

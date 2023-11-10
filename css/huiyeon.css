@@ -1,0 +1,858 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); 
+
+/* main slide */
+#main-slide { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  background: #101010;
+  box-sizing: border-box;
+}
+#main-slide .inner {
+  flex: 1;
+  padding: 120px 0px 20px;
+}
+
+#main-slide .new-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 75rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+#main-slide .new-product-con {
+  margin-top: 50px;
+}
+#main-slide .new-product-subject {
+  flex: 1;
+  color: #fff;
+}
+#main-slide .new-product-subject .new-br {
+  display: block;
+}
+#main-slide .new-product-subject h2 {
+  margin-bottom: 5px;
+  font-size: .875rem;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+#main-slide .new-product-subject h3 {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+#main-slide .new-subhead {
+  display: block;
+  margin: 1rem 0;
+  font-size: 20px;
+}
+#main-slide .new-detail p {
+  margin: 1rem 0;
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
+}
+#main-slide .new-detail p>span {
+  display: block;
+}
+#main-slide .new-product-items {
+  max-width: 53.75rem;
+  height: 45rem;
+}
+
+#main-slide .mainSwiper {
+  max-width: 100%;
+  height: 100%;
+}
+
+
+/* slide-images */
+#main-slide .Apple-Vision-Pro {
+  background: url(../images/new-product-applevisionpro.jpg) no-repeat;
+  background-position: right -20% bottom -100px;
+  background-size: contain;
+  background-color: #000;
+}
+#main-slide .iPhone-15-Pro {
+  background: url(../images/new-product-iphone15.jpg) no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  background-color: #000;
+}
+#main-slide .iPad-Air {
+  background: url(../images/new-product-ipad.jpg) no-repeat;
+  background-position: right -20% top -5rem;
+  background-size: contain;
+  background-color: #fafafa;
+}
+#main-slide .Apple-Watch {
+  background: url(../images/new-product-watch.jpg) no-repeat;
+  background-position: left top;
+  background-size: contain;
+  background-color: #000;
+}
+#main-slide .AirPods-Pro {
+  background: url(../images/new-product-airpods.jpg) no-repeat bottom/contain;
+  background-color: #161616;
+}
+#main-slide .Mac-Studio {
+  background: url(../images/new-product-macbook.jpg) no-repeat;
+  background-position: left 5% bottom 50px;
+  background-size: contain;
+  background-color: #fff;
+}
+
+/* slide-text */
+/* common */
+#main-slide .new-product-items [class$="title"]{
+  margin-bottom: 20px;
+  font-size: 3.125rem;
+  font-weight: bold;
+}
+#main-slide .new-product-items [class$="text"]{
+  font-size: 1.25rem;
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+#main-slide .new-product-items [class$="text"]>span {
+  display: block;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+
+#main-slide .swiper-slide {
+  position: relative;
+  font-weight: 400;
+}
+#main-slide .more {
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  display: inline-block;
+  margin-top: 20px;
+  padding: .3125rem .9375rem;
+  border-radius: 5px;
+  color: var(--accent-color);
+  box-sizing: border-box;
+  transition: all .5s ease;
+}
+#main-slide .more:hover {
+  color: var(--hover-color);
+}
+
+#main-slide .more:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--hover-color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+#main-slide .more:hover {
+  color: #fff;
+}
+
+#main-slide .more:before {
+  top: 100%;
+  left: 100%;
+  transition: all .7s;
+}
+
+#main-slide .more:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+#main-slide .more:active:before {
+  background: var(--hover-color);
+  transition: background 0s;
+}
+
+
+
+
+/* 애플 비전 프로 */
+#main-slide .AVP-content {
+  position: absolute;
+  top: 20%; left: 8%;
+  color: #fff;
+}
+#main-slide .AVP-content .AVP-text span {
+  font-weight: normal;
+}
+#main-slide .AVP-content strong {
+  display: block;
+  margin-top: 50px;
+  font-size: 1.25rem;
+}
+#main-slide .AVP-content a:nth-of-type(2) {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* 아이폰 15 프로 */
+#main-slide .ip15pro-content {
+  position: absolute;
+  top: 10%; left: 50%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  transform: translateX(-50%);
+}
+
+/* 아이패드 에어 */
+#main-slide .ipAir-content {
+  position: absolute;
+  bottom: 10%; left: 5%;
+}
+
+/* 애플 워치 */
+#main-slide .AW-content {
+  position: absolute;
+  bottom: 7rem; left: 50%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  transform: translateX(-50%);
+}
+
+/* 에어팟 프로 */
+#main-slide .APP-content {
+  margin-top: 3.125rem;
+  text-align: center;
+  color: #fff;
+}
+
+/* 맥 스튜디오 */
+#main-slide .MS-content {
+  position: absolute;
+  top: 5%; right: 5%;
+  text-align: right;
+}
+
+/* pagination */
+#main-slide .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#main-slide .swiper-pagination-bullet { 
+  width: 12px;
+  height: 12px;
+  background: transparent; 
+  border: 1px solid var(--accent-color);
+  opacity: 1; }
+
+#main-slide .swiper-pagination-bullet-active { 
+  width: 40px; 
+  transition: width .5s; 
+  border-radius: 5px; 
+  background: var(--accent-color); 
+  border: 1px solid transparent; 
+}
+
+
+
+/* main-slide 태블릿 */
+@media (min-width: 600px) and (max-width: 1299px) {
+  #main-slide {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #main-slide>.inner {
+    padding: 70px 30px;
+  }
+  #main-slide .new-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #main-slide .new-product-con {
+    width: 100%;
+    margin: 0;
+  }
+  #main-slide .new-product-subject .new-br {
+    display: inline-block;
+  }
+  #main-slide .new-detail {
+    display: none;
+  }
+
+  /* slide */
+  #main-slide .new-product-items {
+    max-width: 100%;
+    height: 45rem;
+    box-sizing: border-box;
+  }
+  /* slide-images */
+  #main-slide .Apple-Vision-Pro {
+    background-position: right -10% bottom -50px;
+  }
+  #main-slide .iPad-Air {
+    background-position: right 8% top -3rem;
+  }
+  /* 아이폰 15 프로 */
+  #main-slide .ip15pro-content {
+    top: 3%;
+  }
+}
+
+/* main-slide 모바일 */
+@media (max-width: 599px) {
+  #main-slide { 
+    display: block;
+  }
+  #main-slide .inner {
+    padding: 50px 30px;
+  }
+  #main-slide .new-product {
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  #main-slide .new-product-con {
+    margin: 0;
+  }
+  #main-slide .new-product-subject .new-br {
+    display: inline-block;
+  }
+  #main-slide .new-detail {
+    display: none;
+  }
+  #main-slide .new-product-items [class$="text"]>span {
+    display: none;
+  }
+  
+  #main-slide .new-product-items {
+    max-width: 860px;
+    height: 660px;
+    margin-top: 30px;
+  }
+  
+  #main-slide .more {
+    display: inline-block;
+    font-size: 16px;
+  }
+  /* 애플 비전 */
+  #main-slide .Apple-Vision-Pro {
+    background-position: left 50% bottom -60px;
+  }
+  #main-slide .AVP-content {
+    top: 5%; left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+  #main-slide .AVP-content>strong {
+    display: none;
+  }
+
+  /* 아이폰 15 프로 */
+  #main-slide .iPhone-15-Pro {
+    background-size: 170%;
+  }
+
+  /* 아이패드 에어 */
+  #main-slide .iPad-Air {
+    background-position: center top;
+  }
+  
+  /* 애플 워치 */
+
+  #main-slide .Apple-Watch {
+    background-position: center top 20px;
+    background-size: 150%;
+  }
+  #main-slide .AW-content {
+    bottom: 8rem; left: 50%;
+  }
+
+  /* 에어팟 프로 */
+  #main-slide .AirPods-Pro {
+    background-position: center bottom;
+  }
+  #main-slide .APP-content {
+    margin-top: 8rem;
+  }
+
+  /* pagination */
+  #main-slide .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  #main-slide .swiper-pagination-bullet { 
+    width: 12px;
+    height: 12px;
+    background: transparent; 
+    border: 1px solid var(--accent-color);
+    opacity: 1; }
+
+  #main-slide .swiper-pagination-bullet-active { 
+    width: 40px; 
+    transition: width .5s; 
+    border-radius: 5px; 
+    background: var(--accent-color); 
+    border: 1px solid transparent; 
+  }
+}
+
+
+
+
+
+/* service */
+#service {
+  height: 100%;
+  line-height: 1.3;
+  box-sizing: border-box;
+  background: #f5f5f7;
+}
+#service>.inner {
+  padding: 75px 0;
+}
+#service .serv-br {
+  display: block;
+}
+#service .serv-contents {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+#service .serv-items {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  grid-template-areas: 
+  'appleTV enter appleHome appleCare' 
+  '. school company refurbish';
+}
+
+#service .serv-appleTV {
+  grid-area: appleTV;
+}
+#service .serv-enter {
+  grid-area: enter;
+}
+#service .serv-appleHome {
+  grid-area: appleHome;
+}
+#service .serv-appleCare {
+  grid-area: appleCare;
+}
+#service .serv-school {
+  grid-area: school;
+}
+#service .serv-company {
+  grid-area: company;
+}
+#service .serv-refurbish {
+  grid-area: refurbish;
+}
+
+#service .serv-items li {
+  position: relative;
+  width: 19.375rem;
+  height: 19.375rem;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: width .5s ease-in-out; 
+}
+
+#service .serv-items li>span {
+  position: absolute;
+  top: 0; left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+}
+
+/* icon deactive */
+#service .serv-view-deactive {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #feffff 0%,#fafafa 100%);
+  box-sizing: border-box;
+}
+#service .serv-view-deactive .serv-viewD-text {
+  position: absolute;
+  z-index: 5;
+  padding: 1.875rem;
+}
+#service .serv-viewD-text .serv-viewD-title {
+  font-size: .75rem;
+  font-weight: bold;
+  color: #ccc;
+}
+#service .serv-viewD-text .serv-viewD-content {
+  margin-top: .3125rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* appleTV icon */
+#service .serv-viewD-appleTV .serv-viewD-content {
+  color: #fff;
+}
+#service .serv-viewD-appleTV .appleTV-logo {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/appleTV_logo2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* appleOne icon */
+#service .serv-viewD-enter .appleOne-logo {
+  position: absolute;
+  bottom: 1.875rem; left: 50%;
+  width: 15.625rem;
+  height: 9.375rem;
+  background-image: url(../images/appleOne_logo2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: translateX(-50%);
+}
+
+/* appleHome icon */
+#service .serv-viewD-appleHome .appleHome-logo {
+  position: absolute;
+  bottom: 1.875rem; right: 1.875rem;
+  width: 7.5rem;
+  height: 8.125rem;
+  background-image: url(../images/appleHome_logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* appleCare icon */
+#service .serv-viewD-appleCare .appleCare-logo {
+  position: absolute;
+  bottom: 1.875rem; left: 1.875rem;
+  width: 15.625rem;
+  height: 7.5rem;
+  background-image: url(../images/appleCare_logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+/* appleSchool icon */
+#service .serv-viewD-school .school-logo {
+  position: absolute;
+  bottom: .625rem; left: 1.875rem;
+  width: 15.625rem;
+  height: 9.375rem;
+  background-image: url(../images/school_logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* appleCompany icon */
+#service .serv-company .serv-viewD-company{
+  background: #f7f7f7;
+}
+#service .serv-viewD-company .company-logo {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+  height: 60%;
+  z-index: 1;
+  background-image: url(../images/appleCompany.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* appleRefurbish icon */
+#service .serv-viewD-refurbish .refurbish-logo {
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 100%;
+  height: 9.375rem;
+  background-image: url(../images/refur_logo.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+/* icon active */
+#service .serv-view-active {
+  display: none;
+  position: absolute;
+  top: 0; left: 0;
+  width: 40rem;
+  height: 19.375rem;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  background-color: #fafafa;
+}
+/* active text */
+#service .serv-view-active .serv-viewA-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+#service .serv-view-active .serv-viewA-content {
+  width: 50%;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+/* active button */
+#service .serv-view-active a {
+  position: absolute;
+  left: 20px; bottom: 20px;
+  padding: .625rem 1.25rem;
+  font-size: .875rem;
+  border-radius: 10px;
+  color: #fff;
+  background: var(--accent-color);
+  transition: .3s;
+}
+#service .serv-view-active a:hover {
+  background: var(--hover-color);
+}
+
+
+/* appleTV - active */
+#service .serv-viewA-appleTV {
+  background-image: url(../images/BG_appleTV.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+}
+#service .serv-viewA-appleTV .serv-viewA-text {
+  position: absolute;
+  color: #fff;
+}
+#service .serv-viewA-appleTV::before {
+  position: absolute;
+  top: 0; left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(135deg, rgb(0, 0, 0) 0%,rgba(5,5,5,0.5) 100%);
+}
+
+/* appleOne - active */
+#service .serv-viewA-enter {
+  background-image: url(../images/BG_enter.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 50%;
+}
+
+/* appleHome - active */
+#service .serv-viewA-appleHome {
+  background-image: url(../images/BG_appleHome.jpg);
+  background-repeat: no-repeat;
+  background-position: right 1.25rem center;
+  background-size: 45%;
+}
+
+/* appleCare - active */
+#service .serv-viewA-appleCare {
+  background-image: url(../images/BG_appleCare.png);
+  background-repeat: no-repeat;
+  background-position: left 10.625rem bottom -1.25rem;
+  background-size: cover;
+}
+#service .serv-viewA-appleCare .serv-viewA-text {
+  position: absolute;
+}
+#service .serv-viewA-appleCare::before {
+  position: absolute;
+  top: 0; left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #dfd3bc 0%,#dfd3bc 30%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0.5) 100%);
+}
+
+/* appleSchool - active */
+#service .serv-viewA-school {
+  background-image: url(../images/BG_appleSchool.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+}
+#service .serv-viewA-school .serv-viewA-text {
+  position: absolute;
+}
+#service .serv-viewA-school::before {
+  position: absolute;
+  top: 0; left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #fff 0%, #fefefe 15%, #fefefe 45%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+}
+
+/* appleCompany - active */
+#service .serv-viewA-company {
+  background-image: url(../images/BG_company.jpg);
+  background-repeat: no-repeat;
+  background-position: right -6.25rem bottom;
+  background-size: cover;
+}
+#service .serv-viewA-company .serv-viewA-text {
+  position: absolute;
+  color: #fff;
+}
+#service .serv-viewA-company::before {
+  position: absolute;
+  top: 0; left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #000 0%, #000 25%, rgba(5,5,5,0.1) 100%);
+}
+
+/* appleRefurbish - active */
+#service .serv-viewA-refurbish {
+  background-image: url(../images/BG_refur.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#service .serv-viewA-refurbish .serv-viewA-text {
+  position: absolute;
+  color: #fff;
+}
+#service .serv-viewA-refurbish .serv-viewA-text p {
+  width: 60%;
+}
+#service .serv-viewA-refurbish::before {
+  position: absolute;
+  top: 0; left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+#service .serv-items li:hover .serv-view-deactive::after {
+  position: relative;
+  z-index: 6;
+  content: 'Click to View More';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: rgba(0,0,0, 0.5);
+}
+
+/* service 태블릿 */
+@media (min-width: 600px) and (max-width: 1299px) {
+  #service>.inner {
+    padding: 50px 30px;
+  }
+  #service .serv-items {
+    width: 40rem;
+    margin: 20px auto 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      'appleTV enter'
+      'appleHome appleCare'
+      'school company'
+      'refurbish .';
+  }
+}
+
+/* service 모바일 */
+@media (max-width: 599px) {
+  #service>.inner {
+    padding: 50px 30px;
+  }
+  #service .serv-items {
+    width: 100%;
+    margin: 20px auto 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      'appleTV enter'
+      'appleHome appleCare'
+      'school company'
+      'refurbish .';
+  }
+  #service .serv-items li {
+    width: 17rem;
+    height: 17rem;
+  }
+  #service .serv-viewD-enter .appleOne-logo {
+    bottom: 0;
+    background-size: 88%;
+  }
+  #service .serv-view-active {
+    width: 34rem;
+    height: 17rem;
+    padding: 20px;
+  }
+  #service .serv-view-active .serv-viewA-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  #service .serv-view-active .serv-viewA-content:last-of-type {
+    display: none;
+  }
+  /* appleTV - active */
+  #service .serv-viewA-appleTV {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  /* appleOne - active */
+  #service .serv-viewA-enter {
+    width: 100%;
+  }
+  /* appleHome - active */
+  #service .serv-viewA-appleHome {
+    background-image: url(../images/BG_appleHome.jpg);
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 45%;
+  }
+  /* appleCare - active */
+  #service .serv-viewA-appleCare {
+    width: 100%;
+  }
+  /* appleSchool - active */
+  #service .serv-viewA-school {
+    width: 100%;
+  }
+  /* appleCompany - active */
+  #service .serv-viewA-company {
+    width: 100%;
+  }
+  /* appleRefurbish - active */
+  #service .serv-viewA-refurbish {
+    width: 100%;
+  }
+}
